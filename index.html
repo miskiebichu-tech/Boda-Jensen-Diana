@@ -78,7 +78,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   z-index: 1;
 }
 
-/* Detalle floral flotante */
 .hero-inner:before, .hero-inner:after {
   position: absolute;
   content: "🌸";
@@ -112,78 +111,104 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5), 0 8px 20px rgba(0,0,0,0.04);
 }
 
-/* ── SOBRE INTERACTIVO ── */
+/* ── REDISEÑO DE SOBRE INTERACTIVO MÁS ELEGANTE Y CON FOTO ── */
 .envelope-wrap {
-  margin: 30px auto 24px;
-  perspective: 900px;
-  width: min(88%, 350px);
-  height: 220px;
+  margin: 35px auto 30px;
+  perspective: 1000px;
+  width: min(92%, 360px);
+  height: 240px;
   position: relative;
   cursor: pointer;
-  filter: drop-shadow(0 14px 20px rgba(74, 94, 77, 0.12));
+  filter: drop-shadow(0 16px 25px rgba(74, 94, 77, 0.16));
 }
 
 .envelope {
   position: absolute;
-  inset: 26px 0 0;
-  background: #e8dccf;
-  border-radius: 4px;
+  inset: 20px 0 0;
+  background: #e4d7c8;
+  border-radius: 6px;
   overflow: visible;
 }
+
 .envelope:before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #f5eae0, #decaba);
-  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(145deg, #f7efe6, #decab8);
+  clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
   z-index: 2;
-  border-radius: 4px;
+  border-radius: 6px;
 }
+
 .flap {
   position: absolute;
   left: 0; right: 0; top: 0;
-  height: 130px;
-  background: linear-gradient(145deg, #fff3eb, #e6d3c3);
+  height: 135px;
+  background: linear-gradient(145deg, #ffffff, #eddcd0);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top;
-  transition: transform 1s ease;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
-  filter: drop-shadow(0 3px 3px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.08));
 }
+
 .letter {
   position: absolute;
-  left: 8%; width: 84%; height: 165px; top: 8px;
+  left: 5%; width: 90%; height: 220px; top: -10px;
   background: linear-gradient(145deg, #ffffff, #fffdfa);
   border: 1px solid var(--soft-gold);
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: transform 1s ease;
+  justify-content: space-between;
+  padding: 16px 14px;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
+
+.letter-photo-frame {
+  width: 100px;
+  height: 125px;
+  border-radius: 50px;
+  border: 2px solid var(--champagne-gold);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.letter-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.letter-content {
+  flex-grow: 1;
+  text-align: center;
+  padding-left: 10px;
+}
+
 .seal {
   position: absolute;
   z-index: 5;
   left: 50%; top: 82px;
   transform: translateX(-50%);
-  width: 58px; height: 58px;
+  width: 60px; height: 60px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 30%, #ebd498, #b8954f 75%);
-  box-shadow: 0 4px 10px rgba(184, 149, 79, 0.35);
+  box-shadow: 0 4px 12px rgba(184, 149, 79, 0.4);
   border: 2px solid #f7ebc6;
   color: #ffffff;
   display: grid;
   place-items: center;
   font-size: 20px;
-  transition: opacity 0.4s;
+  transition: opacity 0.4s, transform 0.4s;
 }
 
 .envelope-wrap.open .flap { transform: rotateX(180deg); z-index: 0; }
-.envelope-wrap.open .letter { transform: translateY(-70px); z-index: 3; }
-.envelope-wrap.open .seal { opacity: 0; }
+.envelope-wrap.open .letter { transform: translateY(-110px); z-index: 3; }
+.envelope-wrap.open .seal { opacity: 0; transform: translateX(-50%) scale(0.5); }
 
 .tap {
   font: 10px 'Arial', sans-serif;
@@ -217,7 +242,7 @@ h1 {
   font-weight: 600;
 }
 
-.primary, .outline, .small-btn {
+.primary, .outline {
   border: 0;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -323,6 +348,23 @@ h3 {
   color: var(--spring-green);
 }
 
+/* Foto principal en sección de mensaje */
+.photo-container {
+  width: min(100%, 340px);
+  height: 420px;
+  margin: 30px auto;
+  border-radius: 180px 180px 20px 20px;
+  overflow: hidden;
+  border: 4px solid var(--paper-white);
+  box-shadow: 0 12px 32px rgba(74, 94, 77, 0.15), 0 0 0 1px var(--soft-gold);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .date-card {
   border: 1px solid var(--champagne-gold);
   padding: 32px 24px;
@@ -393,25 +435,38 @@ h3 {
 .event strong { font-weight: 400; color: var(--spring-green); font-size: 19px; }
 .event p { font-size: 14px; line-height: 1.6; margin: 5px 0 0; color: var(--text-muted); }
 
+/* ── VESTIMENTA CON SILUETAS VECTORIALES ELEGANTES ── */
 .dress {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 30px;
   flex-wrap: wrap;
   margin: 32px 0;
 }
+
 .dress-card {
-  width: 150px;
-  padding: 24px 12px;
+  width: 170px;
+  padding: 28px 16px;
   border: 1px solid var(--line-color);
   background: var(--paper-white);
-  border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .dress-card:first-child { background: linear-gradient(145deg, #ffffff, #f0f4ee); }
 .dress-card:last-child { background: linear-gradient(145deg, #ffffff, #fbf0ed); }
-.dress-card .icon { font-size: 38px; }
-.dress-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 10px 0 0; }
+
+.dress-icon-svg {
+  width: 54px;
+  height: 70px;
+  fill: var(--spring-green);
+  margin-bottom: 12px;
+}
+
+.dress-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 10px 0 0; }
 
 .giftbox, .rsvp {
   max-width: 520px;
@@ -469,31 +524,6 @@ textarea { min-height: 80px; resize: vertical; }
 .foot .names { color: #faf5ee; font-size: 30px; }
 .foot p { font-size: 13px; line-height: 1.7; color: #d6ded7; }
 
-/* ── PANEL DE EDICIÓN & TOAST ── */
-.edit-panel {
-  background: var(--paper-white);
-  border: 1px dashed var(--champagne-gold);
-  padding: 24px;
-  margin: 24px auto;
-  max-width: 620px;
-  text-align: left;
-  border-radius: 6px;
-}
-.edit-panel summary { cursor: pointer; color: var(--spring-green); font-size: 17px; font-weight: 500; }
-.edit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
-
-.small-btn {
-  background: #e8efe6;
-  color: var(--spring-green);
-  padding: 10px 16px;
-  font: 11px 'Arial', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 14px;
-  border-radius: 20px;
-}
-.small-btn:hover { background: #dce7d9; }
-
 .toast {
   position: fixed;
   bottom: 24px; left: 50%;
@@ -518,16 +548,12 @@ textarea { min-height: 80px; resize: vertical; }
 .fade.visible { opacity: 1; transform: none; }
 .tiny { font: 11px 'Arial', sans-serif; color: var(--text-muted); line-height: 1.7; }
 
-/* ── ADAPTABILIDAD MÓVIL ── */
 @media(max-width: 520px) {
   .section { padding: 60px 18px; }
   .grid { grid-template-columns: 1fr; }
-  .envelope-wrap { height: 200px; }
+  .envelope-wrap { height: 210px; }
   .event { grid-template-columns: 80px 1fr; gap: 12px; }
-  .edit-grid { grid-template-columns: 1fr; }
   .music { top: 12px; right: 12px; }
-  .hero-inner:before { left: 0; top: 8%; }
-  .hero-inner:after { right: 0; bottom: 6%; }
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -544,7 +570,21 @@ textarea { min-height: 80px; resize: vertical; }
   <div class="monogram">J <span style="color:var(--champagne-gold)">&</span> D</div>
   <div class="eyebrow">Con la bendición de Dios</div>
   <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Abrir invitación">
-   <div class="envelope"><div class="letter"><div class="eyebrow">Nuestra boda</div><div style="font-size:25px;color:var(--spring-green);margin-top:12px">Jensen <i style="color:var(--champagne-gold)">&</i> Diana</div><div style="font:10px Arial;letter-spacing:.18em;margin-top:12px">27 · 11 · 2026</div></div><div class="flap"></div><div class="seal">J<span style="font-size:12px">&</span>D</div></div>
+   <div class="envelope">
+     <div class="letter">
+       <div class="letter-photo-frame">
+         <!-- Foto recortada elegante dentro de la carta -->
+         <img src="data:image/jpeg;base64,...(FOTO_NOVIO_Y_NOVIA)..." alt="Jensen y Diana">
+       </div>
+       <div class="letter-content">
+         <div class="eyebrow" style="font-size:9px;">Nuestra Boda</div>
+         <div style="font-size:20px;color:var(--spring-green);margin:6px 0">Jensen <i style="color:var(--champagne-gold)">&</i> Diana</div>
+         <div style="font:10px Arial;letter-spacing:.15em;color:var(--sage-light)">27 · 11 · 2026</div>
+       </div>
+     </div>
+     <div class="flap"></div>
+     <div class="seal">J<span style="font-size:12px">&</span>D</div>
+   </div>
   </div>
   <div class="tap" id="tapText">Toca el sobre para abrir la invitación</div>
   <h1>Jensen <span class="amp">&</span><br>Diana</h1>
@@ -552,18 +592,27 @@ textarea { min-height: 80px; resize: vertical; }
   <button class="primary" onclick="document.getElementById('mensaje').scrollIntoView({behavior:'smooth'})">Descubrir invitación</button>
  </div>
 </header>
+
 <section class="section center fade" id="mensaje"><div class="content">
  <div class="kicker">Un día para recordar</div><div class="botanical">❧ ✦ ❧</div>
  <div class="names" id="namesDisplay">Jensen Izquierdo Vásquez<br><span style="font-style:italic;color:var(--champagne-gold);font-size:.8em">&</span><br>Diana Isamar Gómez Ahuanari</div>
+ 
+ <!-- Fotografía principal de los novios -->
+ <div class="photo-container">
+    <img src="data:image/jpeg;base64,...(FOTO_NOVIO_Y_NOVIA)..." alt="Jensen y Diana">
+ </div>
+
  <p class="intro" style="margin-top:25px">Con inmensa alegría y con la bendición de Dios, queremos compartir contigo el comienzo de una nueva etapa de nuestras vidas. Nos encantaría que nos acompañes en este día tan especial.</p>
  <div class="botanical">❦</div><p class="kicker">¡Nos casamos!</p>
  </div></section>
+
 <section class="section center fade" id="fecha"><div class="content">
  <div class="kicker">Reserva la fecha</div><h2>El comienzo de<br>nuestra historia</h2>
  <div class="date-card"><div class="date-month" id="monthDisplay">Noviembre · 2026</div><div class="date-num" id="dayDisplay">27</div><div class="eyebrow" id="weekdayDisplay">Viernes</div><div style="margin:20px 0;color:var(--champagne-gold)">— ✦ —</div><div style="font-size:18px;color:var(--spring-green)" id="timeDisplay">5:00 p. m.</div></div>
  <button class="outline" id="calendarBtn">＋ Añadir al calendario</button>
  <div id="countdown" style="margin-top:22px;color:var(--sage-light);font-size:14px"></div>
  </div></section>
+
 <section class="section center fade" id="ceremonia"><div class="content">
  <div class="kicker">Celebremos juntos</div><h2>Detalles de la boda</h2><p class="intro">Tu presencia hará que este momento sea aún más inolvidable.</p>
  <div class="grid">
@@ -575,17 +624,38 @@ textarea { min-height: 80px; resize: vertical; }
   <div class="event"><time>Por confirmar</time><div><strong>Recepción y brindis</strong><p>Compartiremos juntos la alegría de este día.</p></div></div>
   <div class="event"><time>Por confirmar</time><div><strong>Celebración</strong><p>Una noche para crear recuerdos inolvidables.</p></div></div>
  </div>
- <div class="map-placeholder"><div style="font-size:26px">⌖</div><h3>Cómo llegar</h3><p id="mapText">Parroquia “Virgen del Carmen”</p><a id="mapLink" class="outline" style="display:inline-block;text-decoration:none;margin-top:8px" target="_blank" rel="noopener">Ver ubicación en Maps ↗</a><p class="tiny">La ubicación exacta se puede actualizar desde “Editar detalles”.</p></div>
+ <div class="map-placeholder"><div style="font-size:26px">⌖</div><h3>Cómo llegar</h3><p id="mapText">Parroquia “Virgen del Carmen”</p><a id="mapLink" class="outline" style="display:inline-block;text-decoration:none;margin-top:8px" target="_blank" rel="noopener">Ver ubicación en Maps ↗</a></div>
  </div></section>
+
 <section class="section center fade" id="vestimenta"><div class="content">
  <div class="kicker">Código de vestimenta</div><h2>Elegancia para<br>una ocasión especial</h2>
- <div class="dress"><div class="dress-card"><div class="icon">♙</div><h3 style="font-size:18px">Caballeros</h3><p>Vestimenta formal o elegante.</p></div><div class="dress-card"><div class="icon">♧</div><h3 style="font-size:18px">Damas</h3><p>Vestimenta formal en tonos de tu preferencia.</p></div></div>
+ <div class="dress">
+   <!-- Tarjeta Caballeros con silueta vectorial SVG -->
+   <div class="dress-card">
+     <svg class="dress-icon-svg" viewBox="0 0 24 24">
+       <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3 7l-2 1.5V18h2.5v4h5v-4H17v-7.5L15 9h-6zm1.5 1.5h3v2h-3v-2z"/>
+     </svg>
+     <h3 style="font-size:18px">Caballeros</h3>
+     <p>Traje formal o esmoquin elegante.</p>
+   </div>
+   
+   <!-- Tarjeta Damas con silueta vectorial SVG -->
+   <div class="dress-card">
+     <svg class="dress-icon-svg" viewBox="0 0 24 24" style="fill:var(--rose-accent)">
+       <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-2 5l-3 4.5L10 22h4l3-10.5L14 7h-4zm2 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+     </svg>
+     <h3 style="font-size:18px">Damas</h3>
+     <p>Vestido largo formal en tonos de tu preferencia.</p>
+   </div>
+ </div>
  <p class="tiny">Sugerencia opcional: reservar el blanco y marfil para la novia.</p>
  </div></section>
+
 <section class="section center fade" id="regalos"><div class="content">
  <div class="kicker">Un detalle de cariño</div><h2>Lista de regalos</h2><div class="botanical">❧</div>
  <div class="giftbox"><p class="intro" style="font-size:16px">Tu compañía es nuestro mejor regalo. Si deseas tener un detalle con nosotros, pronto compartiremos nuestra lista de regalos.</p><p id="giftDetails" class="tiny">La información de la lista se actualizará próximamente.</p></div>
  </div></section>
+
 <section class="section center fade" id="rsvp"><div class="content">
  <div class="kicker">Nos encantará verte</div><h2>Confirma tu asistencia</h2><p class="intro">Ayúdanos a preparar cada detalle confirmando si podrás acompañarnos.</p>
  <form class="rsvp" id="rsvpForm">
@@ -597,36 +667,135 @@ textarea { min-height: 80px; resize: vertical; }
   <p class="tiny" style="margin:12px 0 0">Se abrirá WhatsApp con tu respuesta lista para enviar.</p>
  </form>
  </div></section>
-<section class="section fade" id="editar"><div class="content center">
- <details class="edit-panel"><summary>✎ Editar detalles pendientes de la invitación</summary>
- <p class="tiny" style="margin-top:14px">Puedes completar el lugar de recepción, los horarios, la ubicación exacta y la lista de regalos. Los cambios se guardan en este navegador.</p>
- <div class="edit-grid">
-  <div><label for="editReception">Lugar de recepción</label><input id="editReception" placeholder="Nombre y dirección"></div>
-  <div><label for="editReceptionTime">Hora de recepción</label><input id="editReceptionTime" placeholder="Ej. 7:00 p. m."></div>
-  <div><label for="editMap">Dirección exacta de la parroquia</label><input id="editMap" placeholder="Dirección o enlace de Google Maps"></div>
-  <div><label for="editGift">Detalles de la lista de regalos</label><textarea id="editGift" placeholder="Enlace, tiendas o instrucciones"></textarea></div>
-  <div><label for="editDress">Código de vestimenta (opcional)</label><input id="editDress" placeholder="Ej. formal, paleta de colores"></div>
-  <div><label for="editWhatsApp">WhatsApp de confirmación</label><input id="editWhatsApp" inputmode="tel" value="990662988"></div>
- </div><button class="small-btn" id="saveEdits" type="button">Guardar cambios</button> <button class="small-btn" id="resetEdits" type="button">Restablecer</button>
- </details>
- </div></section>
+
 <footer class="foot"><div class="names">Jensen <i style="color:var(--champagne-gold)">&</i> Diana</div><p>Con amor, esperamos compartir contigo<br>uno de los días más felices de nuestras vidas.</p><div style="color:var(--champagne-gold);font-size:22px">❦</div><p id="footerDate">27 · 11 · 2026</p></footer>
 <div class="toast" id="toast" role="status"></div>
+
 <script>
-const defaults={reception:"",receptionTime:"",map:"",gift:"",dress:"",whatsapp:"990662988"};
 const $=id=>document.getElementById(id);
 function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',3000)}
-function getEdits(){try{return {...defaults,...JSON.parse(localStorage.getItem('jensenDianaWedding')||'{}')}}catch(e){return {...defaults}}}
-function applyEdits(d){$('editReception').value=d.reception||'';$('editReceptionTime').value=d.receptionTime||'';$('editMap').value=d.map||'';$('editGift').value=d.gift||'';$('editDress').value=d.dress||'';$('editWhatsApp').value=d.whatsapp||'990662988';$('receptionText').textContent=d.reception||'Detalles del lugar próximamente.';$('receptionTime').textContent=d.receptionTime||'Horario por confirmar';$('giftDetails').textContent=d.gift||'La información de la lista se actualizará próximamente.';if(d.dress){document.querySelector('#vestimenta .intro')?.replaceChildren(document.createTextNode('Código de vestimenta: '+d.dress))}let q=d.map||'Parroquia Virgen del Carmen';$('mapText').textContent=d.map||'Parroquia “Virgen del Carmen”';$('mapLink').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);$('mapLink').style.display='inline-block'}
-function saveEdits(){let d={reception:$('editReception').value.trim(),receptionTime:$('editReceptionTime').value.trim(),map:$('editMap').value.trim(),gift:$('editGift').value.trim(),dress:$('editDress').value.trim(),whatsapp:$('editWhatsApp').value.trim()||'990662988'};try{localStorage.setItem('jensenDianaWedding',JSON.stringify(d))}catch(e){}applyEdits(d);toast('Detalles guardados en este navegador.')}
-$('saveEdits').addEventListener('click',saveEdits);$('resetEdits').addEventListener('click',()=>{try{localStorage.removeItem('jensenDianaWedding')}catch(e){}applyEdits(defaults);toast('Se restablecieron los detalles editables.')});applyEdits(getEdits());
-const envelope=$('envelope');function openEnvelope(){envelope.classList.toggle('open');$('tapText').textContent=envelope.classList.contains('open')?'La invitación está abierta':'Toca el sobre para abrir la invitación'}envelope.addEventListener('click',openEnvelope);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
-const date=new Date(2026,10,27,17,0,0);const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];const days=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];$('monthDisplay').textContent=months[date.getMonth()]+' · '+date.getFullYear();$('dayDisplay').textContent=String(date.getDate()).padStart(2,'0');$('weekdayDisplay').textContent=days[date.getDay()];$('heroDate').textContent=days[date.getDay()].toUpperCase()+' · 27 NOVIEMBRE 2026';$('footerDate').textContent='27 · 11 · 2026';function countdown(){let diff=date-new Date();if(diff<=0){$('countdown').textContent='¡Hoy celebramos nuestro amor!';return}let daysLeft=Math.floor(diff/86400000),hours=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000);$('countdown').textContent=`Faltan ${daysLeft} días, ${hours} horas y ${mins} minutos`;}$('timeDisplay').textContent='5:00 p. m.';$('ceremonyTime').textContent='5:00 p. m.';countdown();setInterval(countdown,60000);
-$('calendarBtn').addEventListener('click',()=>{let ics='BEGIN:VCALENDAR\\r\\nVERSION:2.0\\r\\nPRODID:-//Invitacion Jensen y Diana//ES\\r\\nBEGIN:VEVENT\\r\\nUID:jensen-diana-20261127@example.local\\r\\nDTSTAMP:20260101T120000Z\\r\\nDTSTART:20261127T220000Z\\r\\nDTEND:20261128T000000Z\\r\\nSUMMARY:Boda de Jensen y Diana\\r\\nLOCATION:Parroquia Virgen del Carmen\\r\\nDESCRIPTION:Celebración de la boda de Jensen Izquierdo Vásquez y Diana Isamar Gómez Ahuanari.\\r\\nEND:VEVENT\\r\\nEND:VCALENDAR';let blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Boda-Jensen-y-Diana.ics';a.click();URL.revokeObjectURL(a.href)});
-$('rsvpForm').addEventListener('submit',e=>{e.preventDefault();let d=getEdits();let msg=`Hola, soy ${$('guestName').value}. ${$('attendance').value}. Número de asistentes: ${$('guestCount').value}. ${$('message').value?'Mensaje: '+$('message').value:''} Confirmación para la boda de Jensen y Diana, 27/11/2026.`;let phone=(d.whatsapp||'990662988').replace(/\D/g,'');if(phone.length===9)phone='51'+phone;window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener')});
-const observer=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');observer.unobserve(en.target)}}),{threshold:.12});document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
-let audioCtx=null,oscillators=[],musicOn=false,timer=null;function startMusic(){audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();let master=audioCtx.createGain();master.gain.value=.035;master.connect(audioCtx.destination);const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;function note(){if(!musicOn)return;let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[i%notes.length];g.gain.setValueAtTime(0,audioCtx.currentTime);g.gain.linearRampToValueAtTime(.5,audioCtx.currentTime+.25);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.8);o.connect(g);g.connect(master);o.start();o.stop(audioCtx.currentTime+1.85);i++;timer=setTimeout(note,900)}note();return master}
-$('musicBtn').addEventListener('click',()=>{if(!musicOn){musicOn=true;try{startMusic();$('musicLabel').textContent='Pausar música';toast('Música instrumental original activada.')}catch(e){musicOn=false;toast('Tu navegador no permite reproducir audio.')}}else{musicOn=false;clearTimeout(timer);if(audioCtx)audioCtx.suspend();$('musicLabel').textContent='Música'}});
+
+/* ── SOBRE INTERACTIVO ── */
+const envelope=$('envelope');
+function openEnvelope(){
+  envelope.classList.toggle('open');
+  $('tapText').textContent=envelope.classList.contains('open')?'La invitación está abierta':'Toca el sobre para abrir la invitación';
+}
+envelope.addEventListener('click',openEnvelope);
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
+
+/* ── FECHA Y CUENTA REGRESIVA ── */
+const date=new Date(2026,10,27,17,0,0);
+const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+const days=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+$('monthDisplay').textContent=months[date.getMonth()]+' · '+date.getFullYear();
+$('dayDisplay').textContent=String(date.getDate()).padStart(2,'0');
+$('weekdayDisplay').textContent=days[date.getDay()];
+$('heroDate').textContent=days[date.getDay()].toUpperCase()+' · 27 NOVIEMBRE 2026';
+$('footerDate').textContent='27 · 11 · 2026';
+
+function countdown(){
+  let diff=date-new Date();
+  if(diff<=0){$('countdown').textContent='¡Hoy celebramos nuestro amor!';return}
+  let daysLeft=Math.floor(diff/86400000),hours=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000);
+  $('countdown').textContent=`Faltan ${daysLeft} días, ${hours} horas y ${mins} minutos`;
+}
+$('timeDisplay').textContent='5:00 p. m.';
+$('ceremonyTime').textContent='5:00 p. m.';
+countdown();
+setInterval(countdown,60000);
+
+/* ── FUNCIÓN AÑADIR AL CALENDARIO MEJORADA (DESCARGA ICS Y GOOGLE CALENDAR) ── */
+$('calendarBtn').addEventListener('click', () => {
+  const title = encodeURIComponent("Boda de Jensen y Diana");
+  const details = encodeURIComponent("Celebración de la boda de Jensen Izquierdo Vásquez y Diana Isamar Gómez Ahuanari.");
+  const location = encodeURIComponent("Parroquia Virgen del Carmen");
+  const startDate = "20261127T220000Z";
+  const endDate = "20261128T030000Z";
+
+  // Intentar abrir Google Calendar en dispositivos móviles/navegador, y al mismo tiempo generar descarga de archivo .ics
+  const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+
+  let ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Invitacion Jensen y Diana//ES',
+    'BEGIN:VEVENT',
+    'UID:jensen-diana-20261127@boda.local',
+    `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
+    `DTSTART:${startDate}`,
+    `DTEND:${endDate}`,
+    `SUMMARY:${decodeURIComponent(title)}`,
+    `LOCATION:${decodeURIComponent(location)}`,
+    `DESCRIPTION:${decodeURIComponent(details)}`,
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  let blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  let a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Boda-Jensen-y-Diana.ics';
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  // Abrir Google Calendar en una pestaña secundaria si el usuario lo prefiere
+  setTimeout(() => {
+    if (confirm("¿Deseas agregar el evento directamente en Google Calendar?")) {
+      window.open(gcalUrl, '_blank');
+    }
+  }, 500);
+});
+
+/* ── RSVP A WHATSAPP ── */
+$('rsvpForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  let msg=`Hola, soy ${$('guestName').value}. ${$('attendance').value}. Número de asistentes: ${$('guestCount').value}. ${$('message').value?'Mensaje: '+$('message').value:''} Confirmación para la boda de Jensen y Diana, 27/11/2026.`;
+  let phone='51990662988';
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener');
+});
+
+/* ── ANIMACIONES SCROLL ── */
+const observer=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');observer.unobserve(en.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+/* ── MÚSICA INSTRUMENTAL ORIGINAL ── */
+let audioCtx=null,musicOn=false,timer=null;
+function startMusic(){
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended')audioCtx.resume();
+  let master=audioCtx.createGain();
+  master.gain.value=.035;
+  master.connect(audioCtx.destination);
+  const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];
+  let i=0;
+  function note(){
+    if(!musicOn)return;
+    let o=audioCtx.createOscillator(),g=audioCtx.createGain();
+    o.type='sine';
+    o.frequency.value=notes[i%notes.length];
+    g.gain.setValueAtTime(0,audioCtx.currentTime);
+    g.gain.linearRampToValueAtTime(.5,audioCtx.currentTime+.25);
+    g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.8);
+    o.connect(g);g.connect(master);
+    o.start();o.stop(audioCtx.currentTime+1.85);
+    i++;timer=setTimeout(note,900);
+  }
+  note();
+  return master;
+}
+
+$('musicBtn').addEventListener('click',()=>{
+  if(!musicOn){
+    musicOn=true;
+    try{startMusic();$('musicLabel').textContent='Pausar música';toast('Música instrumental activada.')}
+    catch(e){musicOn=false;toast('Tu navegador no permite reproducir audio.')}
+  }else{
+    musicOn=false;clearTimeout(timer);
+    if(audioCtx)audioCtx.suspend();
+    $('musicLabel').textContent='Música';
+  }
+});
 </script>
 </body>
 </html>
