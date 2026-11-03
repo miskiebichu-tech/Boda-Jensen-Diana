@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#374333">
+<title>Jensen & Diana · Invitación de primavera</title>
+<style>
+:root{--olive:#465440;--olive2:#68745c;--cream:#f7f3e9;--paper:#fffdf7;--gold:#b99a55;--ink:#34392f;--muted:#77796d;--line:#ded8c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}button,input,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}.topline{height:7px;background:linear-gradient(90deg,var(--olive),var(--gold),var(--olive))}.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:32px 18px;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#fffdf8 0%,#f6f1e5 68%,#ece6d7 100%)}.hero:before,.hero:after{content:"";position:absolute;width:230px;height:340px;border:1px solid #a8ae98;opacity:.45;border-radius:100% 0 100% 0;transform:rotate(-28deg);pointer-events:none}.hero:before{left:-110px;top:8%}.hero:after{right:-110px;bottom:4%;transform:rotate(152deg)}.hero-inner{width:min(100%,520px);text-align:center;position:relative;z-index:1}.eyebrow{font:11px/1.6 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--olive2)}.monogram{width:64px;height:64px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;color:var(--olive);font-size:23px;font-style:italic}.envelope-wrap{margin:28px auto 22px;perspective:900px;width:min(88%,350px);height:220px;position:relative;cursor:pointer}.envelope{position:absolute;inset:26px 0 0;background:#e6dfcc;box-shadow:0 14px 28px #5b56301c;overflow:visible}.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#f2ead8,#d9d0b9);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);z-index:2}.flap{position:absolute;left:0;right:0;top:0;height:130px;background:#ede5d2;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform 1s ease;z-index:4;filter:drop-shadow(0 3px 2px #554a2c1a)}.letter{position:absolute;left:8%;width:84%;height:160px;top:8px;background:var(--paper);border:1px solid #ded3b9;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:transform 1s ease;z-index:1}.seal{position:absolute;z-index:5;left:50%;top:82px;transform:translateX(-50%);width:57px;height:57px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d9bd76,#a5843e 72%);box-shadow:0 3px 7px #4d3c1d40;border:2px solid #d8bf7c;color:#fff7d9;display:grid;place-items:center;font-size:21px;transition:opacity .4s}.envelope-wrap.open .flap{transform:rotateX(180deg);z-index:0}.envelope-wrap.open .letter{transform:translateY(-65px);z-index:3}.envelope-wrap.open .seal{opacity:0}.tap{font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(35px,8vw,58px);font-weight:400;line-height:1.04;margin:12px 0;color:var(--olive)}.amp{color:var(--gold);font-style:italic;font-size:.8em} .hero-date{font-size:13px;letter-spacing:.22em;margin:22px 0 28px;color:var(--olive)}.primary,.outline,.small-btn{border:0;cursor:pointer;transition:.2s}.primary{background:var(--olive);color:#fffdf6;padding:14px 22px;letter-spacing:.12em;text-transform:uppercase;font:11px Arial,sans-serif;border-radius:2px}.primary:hover{background:#303b2c;transform:translateY(-1px)}.outline{background:transparent;border:1px solid var(--olive2);color:var(--olive);padding:12px 18px;font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.music{position:fixed;z-index:20;right:14px;top:14px;border:1px solid #c6bc9f;background:#fffdf0eF;color:var(--olive);padding:10px 13px;border-radius:30px;font:11px Arial,sans-serif;box-shadow:0 3px 12px #0000000a}.music span{margin-right:5px}.section{padding:76px 20px;position:relative}.section:nth-of-type(even){background:#efeadc}.content{width:min(100%,760px);margin:auto}.center{text-align:center}.kicker{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--olive2)}h2{font-size:clamp(30px,6vw,44px);font-weight:400;line-height:1.1;color:var(--olive);margin:14px 0 20px}h3{font-size:22px;font-weight:400;color:var(--olive)}.intro{font-size:17px;line-height:1.8;max-width:590px;margin:0 auto;color:#5b5c51}.botanical{font-size:24px;color:var(--gold);margin:20px 0}.names{font-size:clamp(27px,6vw,43px);line-height:1.2;color:var(--olive)}.date-card{border:1px solid var(--gold);padding:26px 18px;margin:30px auto;max-width:420px;background:#fffdf8b5;position:relative}.date-card:before{content:"";position:absolute;inset:6px;border:1px solid #d8c99f;pointer-events:none}.date-num{font-size:62px;line-height:1;color:var(--olive);margin:12px 0}.date-month{letter-spacing:.2em;text-transform:uppercase;font:12px Arial,sans-serif;color:var(--olive2)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.tile{border:1px solid var(--line);background:#fffdf7;padding:24px 18px;text-align:center}.tile .symbol{font-size:25px;color:var(--gold);margin-bottom:12px}.tile p{font-size:15px;line-height:1.65;color:#66685c;margin-bottom:0}.timeline{max-width:520px;margin:28px auto 0;text-align:left}.event{display:grid;grid-template-columns:94px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.event time{color:var(--gold);font-size:13px;letter-spacing:.05em}.event strong{font-weight:400;color:var(--olive);font-size:18px}.event p{font-size:14px;line-height:1.6;margin:5px 0 0;color:var(--muted)}.dress{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:28px 0}.dress-card{width:140px;padding:20px 10px;border:1px solid var(--line);background:#fffdf7}.dress-card .icon{font-size:42px}.dress-card p{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0}.giftbox{max-width:480px;margin:26px auto;background:#fffdf7;border:1px solid var(--line);padding:28px}.map-placeholder{margin:24px auto 0;max-width:520px;padding:25px;background:#e7e5d6;border:1px solid #d1d0bd;color:var(--olive)}.rsvp{max-width:520px;margin:28px auto 0;text-align:left;background:#fffdf7;padding:24px;border:1px solid var(--line)}label{display:block;font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--olive2);margin:14px 0 7px}input,textarea,select{width:100%;padding:12px;border:1px solid #d7d1c1;background:#fffefb;color:var(--ink);border-radius:0}textarea{min-height:70px;resize:vertical}.foot{padding:40px 20px;text-align:center;background:var(--olive);color:#f9f3e4}.foot .names{color:#f9f3e4;font-size:28px}.foot p{font-size:12px;line-height:1.7;color:#d9d9c8}.edit-panel{background:#fffdf7;border:1px dashed var(--gold);padding:20px;margin:24px auto;max-width:620px;text-align:left}.edit-panel summary{cursor:pointer;color:var(--olive);font-size:17px}.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.small-btn{background:#e9e2ce;color:var(--olive);padding:10px 14px;font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;margin-top:12px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#35412f;color:white;padding:12px 18px;font:12px Arial,sans-serif;z-index:30;display:none;max-width:90%;text-align:center}.fade{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}.fade.visible{opacity:1;transform:none}.tiny{font:11px Arial,sans-serif;color:var(--muted);line-height:1.7}
+@media(max-width:520px){.section{padding:60px 18px}.grid{grid-template-columns:1fr}.envelope-wrap{height:200px}.event{grid-template-columns:78px 1fr;gap:10px}.edit-grid{grid-template-columns:1fr}.music{top:9px;right:9px}.hero-inner{padding-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Rediseño primavera: romántico, luminoso y editorial */
+:root{
+ --olive:#536b58; --olive2:#7d927b; --cream:#fbf7f0; --paper:#fffdf9;
+ --gold:#c5a66b; --ink:#45483f; --muted:#858477; --line:#e8dfd2;
+ --blush:#f3e1dc; --sage:#e6ede1; --lilac:#eee8f2; --butter:#f6efcf;
+}
+body{background:var(--cream);color:var(--ink);font-family:"Palatino Linotype",Palatino,Georgia,serif}
+.topline{height:5px;background:linear-gradient(90deg,#a9bca2,#e6c6bd,#d9c68c,#c8b8d5,#a9bca2)}
+.hero{background:
+ radial-gradient(ellipse at 12% 18%,#f2e2df 0,transparent 28%),
+ radial-gradient(ellipse at 88% 80%,#e5ecdf 0,transparent 30%),
+ radial-gradient(ellipse at 80% 12%,#f4edcf 0,transparent 24%),
+ linear-gradient(135deg,#fffdf8,#f8f3e9)}
+.hero:before,.hero:after{border-color:#a5b89f;opacity:.5;width:260px;height:360px}
+.hero:before{border-radius:80% 0 80% 0;transform:rotate(-35deg)}
+.hero:after{border-color:#d8b6ae}
+.monogram{border-color:#c8ad77;background:#fffdf9aa;color:#536b58;box-shadow:0 0 0 5px #ffffff70}
+.eyebrow,.kicker{color:#718873}
+h1,h2,.names,h3{color:#536b58}
+.amp{color:#c68f87}
+.envelope-wrap{filter:drop-shadow(0 16px 18px #5b5a3920)}
+.envelope{background:#e7d9c9}
+.envelope:before{background:linear-gradient(145deg,#f2e4d6,#d9c9b4)}
+.flap{background:linear-gradient(145deg,#fff1e8,#e7d7c3)}
+.letter{background:linear-gradient(145deg,#fffefa,#fbf4e8);border-color:#dfc9a5}
+.seal{background:radial-gradient(circle at 35% 30%,#e3c98a,#b68d4b 72%);border-color:#ead9a7}
+.primary{background:#617862;color:#fffdf7;border-radius:28px;letter-spacing:.1em;box-shadow:0 6px 14px #536b5825}
+.primary:hover{background:#455b48}
+.outline{border-color:#a1b29a;color:#536b58;border-radius:28px}
+.music{border-color:#e2d5c0;background:#fffdf0ed;color:#536b58}
+.section:nth-of-type(even){background:linear-gradient(135deg,#f3eee4,#f8f1ec 48%,#edf1e8)}
+.date-card{border-color:#c9ad75;background:linear-gradient(145deg,#fffefa,#fff8ed);box-shadow:0 12px 35px #8c795019}
+.date-card:before{border-color:#e5d6b4}
+.date-num{color:#617862}
+.date-month{color:#8a9a81}
+.tile{border-color:#e7dbcd;background:#fffdf9;box-shadow:0 8px 22px #6c69520a;border-radius:3px}
+.tile:nth-child(1){background:linear-gradient(145deg,#fffdf9,#f7e9e4)}
+.tile:nth-child(2){background:linear-gradient(145deg,#fffdf9,#edf2e8)}
+.tile .symbol,.botanical{color:#c7a96d}
+.event{border-bottom-color:#e5dccc}
+.event time{color:#bc9c60}
+.dress-card{border-color:#e4d8ca;background:#fffdf9;border-radius:3px}
+.dress-card:first-child{background:linear-gradient(145deg,#fffdf9,#e9eee5)}
+.dress-card:last-child{background:linear-gradient(145deg,#fffdf9,#f5e6e2)}
+.giftbox,.rsvp{border-color:#e4d8ca;background:#fffdf9;box-shadow:0 10px 28px #6c69520a}
+.map-placeholder{background:linear-gradient(145deg,#edf1e7,#f5eee3);border-color:#d8dfd0;border-radius:3px}
+input,textarea,select{border-color:#e2d8c8;background:#fffefa;border-radius:4px}
+.foot{background:linear-gradient(135deg,#4b624f,#637b63);color:#fffaf0}
+.foot .names{color:#fffaf0}
+.foot p{color:#e4e9db}
+.edit-panel{border-color:#cbb27a;background:#fffdf9;border-radius:4px}
+.small-btn{background:#e9eee4;color:#536b58;border-radius:24px}
+.toast{background:#4b624f;border-radius:24px;box-shadow:0 8px 24px #0002}
+.hero-date{color:#718873}
+.tap{color:#8d8b7c}
+/* Pequeños detalles botánicos decorativos, sin imágenes externas */
+.hero-inner:before,.hero-inner:after{position:absolute;content:"✿";font-size:25px;color:#c7a7a0;opacity:.8;pointer-events:none}
+.hero-inner:before{top:13%;left:1%;transform:rotate(-18deg)}
+.hero-inner:after{bottom:14%;right:1%;font-size:20px;color:#a4b79d;transform:rotate(18deg)}
+@media(max-width:520px){.hero-inner:before{left:0;top:10%}.hero-inner:after{right:0;bottom:11%}}
+
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<button class="music" id="musicBtn" aria-label="Activar música"><span>♫</span><b id="musicLabel">Música</b></button>
+<header class="hero" id="inicio">
+ <div class="hero-inner">
+  <div class="monogram">J <span style="color:var(--gold)">&</span> D</div>
+  <div class="eyebrow">Con la bendición de Dios</div>
+  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Abrir invitación">
+   <div class="envelope"><div class="letter"><div class="eyebrow">Nuestra boda</div><div style="font-size:25px;color:var(--olive);margin-top:12px">Jensen <i style="color:var(--gold)">&</i> Diana</div><div style="font:10px Arial;letter-spacing:.18em;margin-top:12px">27 · 11 · 2026</div></div><div class="flap"></div><div class="seal">J<span style="font-size:12px">&</span>D</div></div>
+  </div>
+  <div class="tap" id="tapText">Toca el sobre para abrir la invitación</div>
+  <h1>Jensen <span class="amp">&</span><br>Diana</h1>
+  <div class="hero-date" id="heroDate">VIERNES · 27 NOVIEMBRE 2026</div>
+  <button class="primary" onclick="document.getElementById('mensaje').scrollIntoView({behavior:'smooth'})">Descubrir invitación</button>
+ </div>
+</header>
+<section class="section center fade" id="mensaje"><div class="content">
+ <div class="kicker">Un día para recordar</div><div class="botanical">❧ ✦ ❧</div>
+ <div class="names" id="namesDisplay">Jensen Izquierdo Vásquez<br><span style="font-style:italic;color:var(--gold);font-size:.8em">&</span><br>Diana Isamar Gómez Ahuanari</div>
+ <p class="intro" style="margin-top:25px">Con inmensa alegría y con la bendición de Dios, queremos compartir contigo el comienzo de una nueva etapa de nuestras vidas. Nos encantaría que nos acompañes en este día tan especial.</p>
+ <div class="botanical">❦</div><p class="kicker">¡Nos casamos!</p>
+ </div></section>
+<section class="section center fade" id="fecha"><div class="content">
+ <div class="kicker">Reserva la fecha</div><h2>El comienzo de<br>nuestra historia</h2>
+ <div class="date-card"><div class="date-month" id="monthDisplay">Noviembre · 2026</div><div class="date-num" id="dayDisplay">27</div><div class="eyebrow" id="weekdayDisplay">Viernes</div><div style="margin:20px 0;color:var(--gold)">— ✦ —</div><div style="font-size:18px;color:var(--olive)" id="timeDisplay">5:00 p. m.</div></div>
+ <button class="outline" id="calendarBtn">＋ Añadir al calendario</button>
+ <div id="countdown" style="margin-top:22px;color:var(--olive2);font-size:14px"></div>
+ </div></section>
+<section class="section center fade" id="ceremonia"><div class="content">
+ <div class="kicker">Celebremos juntos</div><h2>Detalles de la boda</h2><p class="intro">Tu presencia hará que este momento sea aún más inolvidable.</p>
+ <div class="grid">
+  <div class="tile"><div class="symbol">✧</div><h3>Ceremonia</h3><p id="ceremonyText">Parroquia “Virgen del Carmen”</p><p id="ceremonyTime">5:00 p. m.</p></div>
+  <div class="tile"><div class="symbol">❦</div><h3>Recepción</h3><p id="receptionText">Detalles del lugar próximamente.</p><p id="receptionTime">Horario por confirmar</p></div>
+ </div>
+ <div class="timeline">
+  <div class="event"><time>5:00 p. m.</time><div><strong>Ceremonia religiosa</strong><p>Unimos nuestras vidas ante Dios.</p></div></div>
+  <div class="event"><time>Por confirmar</time><div><strong>Recepción y brindis</strong><p>Compartiremos juntos la alegría de este día.</p></div></div>
+  <div class="event"><time>Por confirmar</time><div><strong>Celebración</strong><p>Una noche para crear recuerdos inolvidables.</p></div></div>
+ </div>
+ <div class="map-placeholder"><div style="font-size:26px">⌖</div><h3>Cómo llegar</h3><p id="mapText">Parroquia “Virgen del Carmen”</p><a id="mapLink" class="outline" style="display:inline-block;text-decoration:none;margin-top:8px" target="_blank" rel="noopener">Ver ubicación en Maps ↗</a><p class="tiny">La ubicación exacta se puede actualizar desde “Editar detalles”.</p></div>
+ </div></section>
+<section class="section center fade" id="vestimenta"><div class="content">
+ <div class="kicker">Código de vestimenta</div><h2>Elegancia para<br>una ocasión especial</h2>
+ <div class="dress"><div class="dress-card"><div class="icon">♙</div><h3 style="font-size:18px">Caballeros</h3><p>Vestimenta formal o elegante.</p></div><div class="dress-card"><div class="icon">♧</div><h3 style="font-size:18px">Damas</h3><p>Vestimenta formal en tonos de tu preferencia.</p></div></div>
+ <p class="tiny">Sugerencia opcional: reservar el blanco y marfil para la novia.</p>
+ </div></section>
+<section class="section center fade" id="regalos"><div class="content">
+ <div class="kicker">Un detalle de cariño</div><h2>Lista de regalos</h2><div class="botanical">❧</div>
+ <div class="giftbox"><p class="intro" style="font-size:16px">Tu compañía es nuestro mejor regalo. Si deseas tener un detalle con nosotros, pronto compartiremos nuestra lista de regalos.</p><p id="giftDetails" class="tiny">La información de la lista se actualizará próximamente.</p></div>
+ </div></section>
+<section class="section center fade" id="rsvp"><div class="content">
+ <div class="kicker">Nos encantará verte</div><h2>Confirma tu asistencia</h2><p class="intro">Ayúdanos a preparar cada detalle confirmando si podrás acompañarnos.</p>
+ <form class="rsvp" id="rsvpForm">
+  <label for="guestName">Tu nombre completo</label><input id="guestName" required placeholder="Escribe tu nombre">
+  <label for="attendance">¿Nos acompañarás?</label><select id="attendance" required><option value="">Selecciona una opción</option><option>Sí, allí estaré con mucha alegría</option><option>Lo siento, no podré asistir</option></select>
+  <label for="guestCount">Número de asistentes (incluyéndote)</label><select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option></select>
+  <label for="message">Mensaje para los novios (opcional)</label><textarea id="message" placeholder="Déjanos unas palabras bonitas..."></textarea>
+  <button class="primary" style="width:100%;margin-top:18px" type="submit">Confirmar por WhatsApp</button>
+  <p class="tiny" style="margin:12px 0 0">Se abrirá WhatsApp con tu respuesta lista para enviar.</p>
+ </form>
+ </div></section>
+<section class="section fade" id="editar"><div class="content center">
+ <details class="edit-panel"><summary>✎ Editar detalles pendientes de la invitación</summary>
+ <p class="tiny" style="margin-top:14px">Puedes completar el lugar de recepción, los horarios, la ubicación exacta y la lista de regalos. Los cambios se guardan en este navegador.</p>
+ <div class="edit-grid">
+  <div><label for="editReception">Lugar de recepción</label><input id="editReception" placeholder="Nombre y dirección"></div>
+  <div><label for="editReceptionTime">Hora de recepción</label><input id="editReceptionTime" placeholder="Ej. 7:00 p. m."></div>
+  <div><label for="editMap">Dirección exacta de la parroquia</label><input id="editMap" placeholder="Dirección o enlace de Google Maps"></div>
+  <div><label for="editGift">Detalles de la lista de regalos</label><textarea id="editGift" placeholder="Enlace, tiendas o instrucciones"></textarea></div>
+  <div><label for="editDress">Código de vestimenta (opcional)</label><input id="editDress" placeholder="Ej. formal, paleta de colores"></div>
+  <div><label for="editWhatsApp">WhatsApp de confirmación</label><input id="editWhatsApp" inputmode="tel" value="990662988"></div>
+ </div><button class="small-btn" id="saveEdits" type="button">Guardar cambios</button> <button class="small-btn" id="resetEdits" type="button">Restablecer</button>
+ </details>
+ </div></section>
+<footer class="foot"><div class="names">Jensen <i style="color:var(--gold)">&</i> Diana</div><p>Con amor, esperamos compartir contigo<br>uno de los días más felices de nuestras vidas.</p><div style="color:var(--gold);font-size:22px">❦</div><p id="footerDate">27 · 11 · 2026</p></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const defaults={reception:"",receptionTime:"",map:"",gift:"",dress:"",whatsapp:"990662988"};
+const $=id=>document.getElementById(id);
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',3000)}
+function getEdits(){try{return {...defaults,...JSON.parse(localStorage.getItem('jensenDianaWedding')||'{}')}}catch(e){return {...defaults}}}
+function applyEdits(d){$('editReception').value=d.reception||'';$('editReceptionTime').value=d.receptionTime||'';$('editMap').value=d.map||'';$('editGift').value=d.gift||'';$('editDress').value=d.dress||'';$('editWhatsApp').value=d.whatsapp||'990662988';$('receptionText').textContent=d.reception||'Detalles del lugar próximamente.';$('receptionTime').textContent=d.receptionTime||'Horario por confirmar';$('giftDetails').textContent=d.gift||'La información de la lista se actualizará próximamente.';if(d.dress){document.querySelector('#vestimenta .intro')?.replaceChildren(document.createTextNode('Código de vestimenta: '+d.dress))}let q=d.map||'Parroquia Virgen del Carmen';$('mapText').textContent=d.map||'Parroquia “Virgen del Carmen”';$('mapLink').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);$('mapLink').style.display='inline-block'}
+function saveEdits(){let d={reception:$('editReception').value.trim(),receptionTime:$('editReceptionTime').value.trim(),map:$('editMap').value.trim(),gift:$('editGift').value.trim(),dress:$('editDress').value.trim(),whatsapp:$('editWhatsApp').value.trim()||'990662988'};try{localStorage.setItem('jensenDianaWedding',JSON.stringify(d))}catch(e){}applyEdits(d);toast('Detalles guardados en este navegador.')}
+$('saveEdits').addEventListener('click',saveEdits);$('resetEdits').addEventListener('click',()=>{try{localStorage.removeItem('jensenDianaWedding')}catch(e){}applyEdits(defaults);toast('Se restablecieron los detalles editables.')});applyEdits(getEdits());
+const envelope=$('envelope');function openEnvelope(){envelope.classList.toggle('open');$('tapText').textContent=envelope.classList.contains('open')?'La invitación está abierta':'Toca el sobre para abrir la invitación'}envelope.addEventListener('click',openEnvelope);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
+const date=new Date(2026,10,27,17,0,0);const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];const days=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];$('monthDisplay').textContent=months[date.getMonth()]+' · '+date.getFullYear();$('dayDisplay').textContent=String(date.getDate()).padStart(2,'0');$('weekdayDisplay').textContent=days[date.getDay()];$('heroDate').textContent=days[date.getDay()].toUpperCase()+' · 27 NOVIEMBRE 2026';$('footerDate').textContent='27 · 11 · 2026';function countdown(){let diff=date-new Date();if(diff<=0){$('countdown').textContent='¡Hoy celebramos nuestro amor!';return}let daysLeft=Math.floor(diff/86400000),hours=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000);$('countdown').textContent=`Faltan ${daysLeft} días, ${hours} horas y ${mins} minutos`;}$('timeDisplay').textContent='5:00 p. m.';$('ceremonyTime').textContent='5:00 p. m.';countdown();setInterval(countdown,60000);
+$('calendarBtn').addEventListener('click',()=>{let ics='BEGIN:VCALENDAR\\r\\nVERSION:2.0\\r\\nPRODID:-//Invitacion Jensen y Diana//ES\\r\\nBEGIN:VEVENT\\r\\nUID:jensen-diana-20261127@example.local\\r\\nDTSTAMP:20260101T120000Z\\r\\nDTSTART:20261127T220000Z\\r\\nDTEND:20261128T000000Z\\r\\nSUMMARY:Boda de Jensen y Diana\\r\\nLOCATION:Parroquia Virgen del Carmen\\r\\nDESCRIPTION:Celebración de la boda de Jensen Izquierdo Vásquez y Diana Isamar Gómez Ahuanari.\\r\\nEND:VEVENT\\r\\nEND:VCALENDAR';let blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Boda-Jensen-y-Diana.ics';a.click();URL.revokeObjectURL(a.href)});
+$('rsvpForm').addEventListener('submit',e=>{e.preventDefault();let d=getEdits();let msg=`Hola, soy ${$('guestName').value}. ${$('attendance').value}. Número de asistentes: ${$('guestCount').value}. ${$('message').value?'Mensaje: '+$('message').value:''} Confirmación para la boda de Jensen y Diana, 27/11/2026.`;let phone=(d.whatsapp||'990662988').replace(/\D/g,'');if(phone.length===9)phone='51'+phone;window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener')});
+const observer=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');observer.unobserve(en.target)}}),{threshold:.12});document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+// Gentle original tones generated locally in the browser; no external audio file is needed.
+let audioCtx=null,oscillators=[],musicOn=false,timer=null;function startMusic(){audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();let master=audioCtx.createGain();master.gain.value=.035;master.connect(audioCtx.destination);const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;function note(){if(!musicOn)return;let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[i%notes.length];g.gain.setValueAtTime(0,audioCtx.currentTime);g.gain.linearRampToValueAtTime(.5,audioCtx.currentTime+.25);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.8);o.connect(g);g.connect(master);o.start();o.stop(audioCtx.currentTime+1.85);i++;timer=setTimeout(note,900)}note();return master}
+$('musicBtn').addEventListener('click',()=>{if(!musicOn){musicOn=true;try{startMusic();$('musicLabel').textContent='Pausar música';toast('Música instrumental original activada.')}catch(e){musicOn=false;toast('Tu navegador no permite reproducir audio.')}}else{musicOn=false;clearTimeout(timer);if(audioCtx)audioCtx.suspend();$('musicLabel').textContent='Música'}});
+</script>
+</body>
+</html>
