@@ -27,10 +27,10 @@
   --soft-lilac: #f3e8f5;
   --mint-glow: #e8f5e9;
   
-  /* Relieve 3D esculpido pronunciado para cuadros y tarjetas */
+  /* Relieve 3D con destellos dorados y sombras de profundidad */
   --border-3d: 
     0 2px 0 rgba(255,255,255,0.95),
-    0 4px 0 rgba(212,163,89,0.35),
+    0 4px 0 rgba(212,163,89,0.38),
     0 10px 0 rgba(212,163,89,0.18),
     0 18px 36px rgba(27,77,62,0.22),
     0 30px 60px rgba(27,77,62,0.15),
@@ -47,6 +47,8 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* FONDO GENERAL: Marca de agua botánica primaveral dinámica y elegante */
 body {
   margin: 0;
   background: var(--petal-cream);
@@ -58,13 +60,15 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #fffaf4;
   background-image:
-    radial-gradient(ellipse at 4% 9%, rgba(224,239,213,.65), transparent 26rem),
-    radial-gradient(ellipse at 96% 31%, rgba(248,225,226,.6), transparent 28rem),
-    radial-gradient(ellipse at 7% 58%, rgba(246,232,202,.52), transparent 27rem),
-    radial-gradient(ellipse at 95% 83%, rgba(220,237,214,.6), transparent 30rem),
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 20c-8 12-16 12-24 0 8 16 0 24-16 24 16 8 16 16 0 24 12-8 12 0 24 16-8-16 0-24 16-24-16-8-16-16 0-24-12 8-12 0-24-16z' fill='%23d4a359' fill-opacity='0.035'/%3E%3C/svg%3E");
+    radial-gradient(ellipse at 8% 8%, rgba(230,92,123,.12), transparent 32rem),
+    radial-gradient(ellipse at 92% 35%, rgba(27,77,62,.10), transparent 35rem),
+    radial-gradient(ellipse at 12% 65%, rgba(247,210,131,.14), transparent 30rem),
+    radial-gradient(ellipse at 88% 88%, rgba(230,92,123,.10), transparent 34rem),
+    /* Ilustración Vectorial Marca de Agua: Enredaderas, Rosas, Flores y Hojas Primaverales Elegantes */
+    url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231b4d3e' fill-opacity='0.045'%3E%3Cpath d='M80 15c-12 18-24 18-36 0 12 24 0 36-24 36 24 12 24 24 0 36 24-12 36 0 36 24-12-24 0-36 24-36-24-12-24-24 0-36-12 12-24 0-36-24z'/%3E%3Ccircle cx='80' cy='51' r='6' fill='%23e65c7b' fill-opacity='0.06'/%3E%3Cpath d='M30 110c-6-10-15-10-21 0 7 13 0 20-13 20 13 7 13 14 0 21 13-7 20 0 20 13-7-13 0-20 13-20-13-7-13-13 0-21-7 7-13 0-20-13z' fill='%23d4a359' fill-opacity='0.05'/%3E%3Cpath d='M130 110c6-10 15-10 21 0-7 13 0 20 13 20-13 7-13 14 0 21-13-7-20 0-20 13 7-13 0-20-13-20 13-7 13-13 0-21 7 7 13 0 20-13z' fill='%23e65c7b' fill-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
 }
+
 button, input, textarea, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
@@ -96,7 +100,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: relative;
   overflow: hidden;
   background: 
-    radial-gradient(ellipse at 50% 48%, rgba(255,255,250,.96), rgba(255,255,250,.45) 47%, transparent 75%),
+    radial-gradient(ellipse at 50% 48%, rgba(255,255,250,.96), rgba(255,255,250,.5) 47%, transparent 78%),
     radial-gradient(circle at 9% 14%, #f7dee2 0, transparent 32%),
     radial-gradient(circle at 91% 82%, #d9ebd2 0, transparent 36%),
     radial-gradient(circle at 89% 13%, #faecd0 0, transparent 28%),
@@ -168,104 +172,118 @@ button, a { -webkit-tap-highlight-color: transparent; }
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 }
 
-/* SOBRE CON RELIEVE 3D AL ABRIR */
+/* ── SOBRE INTERACTIVO ALTA GAMA (APERTURA CINEMÁTICA Y ELEGANTE) ── */
 .envelope-wrap {
-  margin: 34px auto 28px;
-  perspective: 1400px;
-  width: min(92%, 380px);
-  height: 255px;
+  margin: 38px auto 32px;
+  perspective: 1600px;
+  width: min(94%, 410px);
+  height: 270px;
   position: relative;
   cursor: pointer;
-  filter: drop-shadow(0 22px 38px rgba(27,77,62,0.3));
-  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+  filter: drop-shadow(0 26px 42px rgba(27,77,62,0.32));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.envelope-wrap:hover { transform: translateY(-8px) scale(1.02); }
+.envelope-wrap:hover { transform: translateY(-10px) scale(1.025); }
+
 .envelope {
   position: absolute;
   inset: 22px 0 0;
-  background: linear-gradient(160deg, #f5e6d8, #e8d0bc);
-  border-radius: 10px;
+  background: linear-gradient(155deg, #f7ebe0, #e6cca8);
+  border-radius: 14px;
   overflow: visible;
   box-shadow: 
-    inset 0 0 0 1px rgba(255,255,255,0.55),
-    0 5px 0 rgba(180,140,100,0.22),
-    0 12px 28px rgba(0,0,0,0.14);
+    inset 0 0 0 1.5px rgba(255,255,255,0.7),
+    0 6px 0 rgba(180,135,90,0.28),
+    0 16px 36px rgba(0,0,0,0.18);
   transform-style: preserve-3d;
 }
+/* Forro Interior Primaveral del Sobre */
 .envelope::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #faf0e6, #e6cbb8);
+  background: 
+    linear-gradient(145deg, #fbf2e9, #ecd1be),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-3-4-8-4-11 0s0 9 11 15c11-6 14-11 11-15s-8-4-11 0z' fill='%23e65c7b' fill-opacity='0.08'/%3E%3Ccircle cx='30' cy='35' r='3' fill='%23d4a359' fill-opacity='0.15'/%3E%3C/svg%3E");
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
   z-index: 2;
-  border-radius: 10px;
+  border-radius: 14px;
 }
+
+/* Solapa Superior con bordes acentuados */
 .flap {
   position: absolute;
   left: 0; right: 0; top: 0;
-  height: 142px;
-  background: linear-gradient(160deg, #fff9f4, #f3d9cc);
+  height: 152px;
+  background: linear-gradient(165deg, #fffcf8 0%, #f6e2d5 70%, #ebd0bf 100%);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top;
-  transition: transform 1.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1.35s cubic-bezier(0.4, 0, 0.15, 1);
   z-index: 4;
-  filter: drop-shadow(0 8px 14px rgba(0,0,0,0.18));
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.22));
   transform-style: preserve-3d;
 }
 .flap::after {
   content: "";
   position: absolute;
-  top: 18px; left: 50%;
+  top: 20px; left: 50%;
   transform: translateX(-50%);
-  width: 70px; height: 2px;
+  width: 90px; height: 2px;
   background: linear-gradient(90deg, transparent, var(--champagne-gold), transparent);
-  opacity: 0.7;
+  opacity: 0.85;
 }
+
+/* ── TARJETA INTERIOR: CON MARCA DE AGUA Y RELIEVE PRIMAVERAL RICO ── */
 .letter {
   position: absolute;
-  left: 5%; width: 90%; height: 230px; top: -8px;
+  left: 4%; width: 92%; height: 245px; top: -10px;
+  /* Fondo texturizado premium con marca de agua de flores y rosas viva */
   background: 
-    linear-gradient(165deg, rgba(255,255,255,0.95), rgba(255,253,248,0.95)),
-    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12c-2-3-6-3-8 0s0 7 8 11c8-4 10-8 8-11s-6-3-8 0z' fill='%23e65c7b' fill-opacity='0.04'/%3E%3C/svg%3E");
+    linear-gradient(165deg, rgba(255,255,255,0.97), rgba(255,252,246,0.94)),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231b4d3e' fill-opacity='0.055'%3E%3Cpath d='M40 10c-6 9-12 9-18 0 6 12 0 18-12 18 12 6 12 12 0 18 12-6 18 0 18 12-6-12 0-18 12-18-12-6-12-12 0-18-6 6-12 0-18-12z'/%3E%3Cpath d='M15 55c-3-5-7-5-10 0 3 6 0 9-6 9 6 3 6 6 0 9 6-3 9 0 9 6-3-6 0-9 6-9-6-3-6-6 0-9-3 3-6 0-9-6z' fill='%23e65c7b' fill-opacity='0.065'/%3E%3C/g%3E%3C/svg%3E");
   border: 2px solid var(--champagne-gold);
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 16px;
-  transition: transform 1.25s cubic-bezier(0.34, 1.3, 0.64, 1);
+  padding: 20px 18px;
+  transition: transform 1.35s cubic-bezier(0.23, 1.25, 0.46, 1);
   z-index: 1;
   box-shadow: var(--border-3d);
   overflow: hidden;
   transform-style: preserve-3d;
 }
+
+/* Marcos Esquineros Botánicos Emboscados */
 .letter::before {
-  content: "❧ 🌹";
+  content: "🌸 ❧ 🌹";
   position: absolute;
-  top: 8px; left: 12px;
-  font-size: 14px;
+  top: 6px; left: 10px;
+  font-size: 13px;
   color: var(--rose-vibrant);
-  opacity: 0.6;
+  opacity: 0.75;
+  letter-spacing: 2px;
 }
 .letter::after {
-  content: "🌸 ❧";
+  content: "🌹 ❧ 🌸";
   position: absolute;
-  bottom: 8px; right: 12px;
-  font-size: 14px;
+  bottom: 6px; right: 10px;
+  font-size: 13px;
   color: var(--emerald-vibrant);
-  opacity: 0.6;
+  opacity: 0.75;
+  letter-spacing: 2px;
 }
+
 .letter-photo-frame {
-  width: 108px;
-  height: 135px;
-  border-radius: 54px 54px 18px 18px;
+  width: 114px;
+  height: 142px;
+  border-radius: 56px 56px 20px 20px;
   border: 2.5px solid var(--champagne-gold);
   overflow: hidden;
   box-shadow: 
-    0 8px 22px rgba(0,0,0,0.16),
-    inset 0 1px 0 rgba(255,255,255,0.65),
-    0 0 0 1px rgba(212,163,89,0.35);
+    0 8px 24px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    0 0 0 1.5px rgba(212,163,89,0.4);
   flex-shrink: 0;
   position: relative;
   background: #f7efe6;
@@ -281,10 +299,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding-left: 12px;
   position: relative;
 }
-.letter-content .eyebrow { font-size: 9px; letter-spacing: 0.22em; }
+.letter-content .eyebrow { font-size: 9px; letter-spacing: 0.24em; }
 .letter-names {
   font-family: 'Playfair Display', serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--spring-green);
   margin: 7px 0 4px;
@@ -294,29 +312,32 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .letter-date {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   color: var(--sage-light);
   font-weight: 600;
 }
 .letter-heart {
   color: var(--rose-vibrant);
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 6px;
-  opacity: 0.85;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(230,92,123,0.3);
 }
+
+/* Sello de Cera Dorado Lujoso */
 .seal {
   position: absolute;
   z-index: 5;
-  left: 50%; top: 88px;
+  left: 50%; top: 92px;
   transform: translateX(-50%);
-  width: 66px; height: 66px;
+  width: 68px; height: 68px;
   border-radius: 50%;
   background: radial-gradient(circle at 32% 28%, #fce8a8, #c6943e 72%);
   box-shadow: 
-    0 8px 24px rgba(198,148,62,0.55),
-    inset 0 2px 0 rgba(255,255,255,0.65),
-    inset 0 -2px 6px rgba(0,0,0,0.18),
-    0 0 0 3px #fff8e0;
+    0 8px 26px rgba(198,148,62,0.6),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 6px rgba(0,0,0,0.2),
+    0 0 0 3.5px #fff8e0;
   border: 2.5px solid #fff8e0;
   color: #ffffff;
   display: flex;
@@ -324,11 +345,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   justify-content: center;
   gap: 2px;
   font-family: 'Playfair Display', serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   transition: opacity 0.5s, transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
   letter-spacing: 0.03em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .seal .amp {
   font-size: 12px;
@@ -336,26 +357,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
   opacity: 0.95;
 }
 
-/* Estado abierto – relieve 3D más pronunciado */
+/* ── ANIMACIÓN APERTURA ELEGANTE Y ELEVACIÓN 3D ── */
 .envelope-wrap.open .flap {
-  transform: rotateX(185deg);
+  transform: rotateX(180deg);
   z-index: 0;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.1));
 }
 .envelope-wrap.open .letter {
-  transform: translateY(-138px) translateZ(40px) rotateX(-4deg);
+  transform: translateY(-155px) translateZ(50px) rotateX(-3deg);
   z-index: 3;
   box-shadow: 
-    0 1px 0 rgba(255,255,255,0.95),
-    0 4px 0 rgba(212,163,89,0.25),
-    0 12px 0 rgba(212,163,89,0.12),
-    0 28px 55px rgba(27,77,62,0.28),
-    0 40px 70px rgba(27,77,62,0.15),
-    inset 0 1px 0 rgba(255,255,255,0.9);
+    0 2px 0 rgba(255,255,255,0.95),
+    0 6px 0 rgba(212,163,89,0.3),
+    0 16px 0 rgba(212,163,89,0.15),
+    0 32px 65px rgba(27,77,62,0.32),
+    0 48px 85px rgba(27,77,62,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.95);
 }
 .envelope-wrap.open .seal {
   opacity: 0;
-  transform: translateX(-50%) scale(0.35) translateY(20px);
+  transform: translateX(-50%) scale(0.3) translateY(25px);
 }
 
 .tap {
@@ -364,7 +385,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-top: 8px;
+  margin-top: 10px;
   font-weight: 500;
 }
 
@@ -484,7 +505,7 @@ h1 {
   pointer-events: none;
   width: clamp(100px,17vw,220px);
   height: clamp(100px,17vw,220px);
-  opacity: 0.55;
+  opacity: 0.58;
   font-family: Georgia, serif;
   line-height: 1.2;
   letter-spacing: 0.06em;
@@ -586,15 +607,15 @@ h3 {
   display: block;
 }
 
-/* SECCIÓN DE PADRINOS CON RELIEVE Y FONDOS PRIMAVERALES DE FLORES Y CORAZONES */
+/* ── TARJETA DE PADRINOS CON MARCA DE AGUA VIBRANTE ── */
 .padrinos-card {
   border: 2px solid var(--champagne-gold);
   padding: 44px 30px;
   margin: 40px auto;
   max-width: 580px;
   background: 
-    linear-gradient(145deg, rgba(255,255,255,0.95), rgba(254,248,243,0.92) 40%, rgba(244,250,238,0.95) 100%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-3-4-8-4-11 0s0 9 11 15c11-6 14-11 11-15s-8-4-11 0z' fill='%23e65c7b' fill-opacity='0.035'/%3E%3C/svg%3E");
+    linear-gradient(145deg, rgba(255,255,255,0.96), rgba(254,248,243,0.93) 40%, rgba(244,250,238,0.96) 100%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-3-4-8-4-11 0s0 9 11 15c11-6 14-11 11-15s-8-4-11 0z' fill='%23e65c7b' fill-opacity='0.05'/%3E%3Ccircle cx='30' cy='36' r='3' fill='%23d4a359' fill-opacity='0.12'/%3E%3C/svg%3E");
   position: relative;
   border-radius: 22px;
   box-shadow: var(--border-3d);
@@ -615,7 +636,7 @@ h3 {
   margin-top: 26px;
 }
 .padrino-item {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.94);
   border: 1.5px solid var(--line-color);
   border-radius: 14px;
   padding: 18px 24px;
@@ -629,7 +650,7 @@ h3 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .padrino-role {
   font-family: 'Montserrat', sans-serif;
@@ -647,14 +668,15 @@ h3 {
   margin-top: 4px;
 }
 
+/* TARJETA DE FECHA */
 .date-card {
   border: 2px solid var(--champagne-gold);
   padding: 42px 30px;
   margin: 40px auto;
   max-width: 450px;
   background: 
-    linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,251,242,0.95)),
-    url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5c-4-4-10-4-13 0s0 10 13 18c13-8 17-14 13-18s-9-4-13 0z' fill='%23d4a359' fill-opacity='0.04'/%3E%3C/svg%3E");
+    linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,251,242,0.96)),
+    url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5c-4-4-10-4-13 0s0 10 13 18c13-8 17-14 13-18s-9-4-13 0z' fill='%23d4a359' fill-opacity='0.05'/%3E%3C/svg%3E");
   position: relative;
   border-radius: 18px;
   box-shadow: var(--border-3d);
@@ -781,7 +803,7 @@ h3 {
   padding: 42px 34px;
   border-radius: 20px;
   box-shadow: var(--border-3d);
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20c-5-6-12-6-16 0s0 14 16 22c16-8 21-16 16-22s-11-6-16 0z' fill='%23e65c7b' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20c-5-6-12-6-16 0s0 14 16 22c16-8 21-16 16-22s-11-6-16 0z' fill='%23e65c7b' fill-opacity='0.035'/%3E%3C/svg%3E");
 }
 .yape-card {
   background: linear-gradient(145deg, #ffffff, #f7edf9);
@@ -933,7 +955,7 @@ textarea { min-height: 95px; resize: vertical; }
 @media(max-width: 520px) {
   .section { padding: 70px 18px; }
   .grid { grid-template-columns: 1fr; }
-  .envelope-wrap { height: 225px; }
+  .envelope-wrap { height: 235px; }
   .event { grid-template-columns: 85px 1fr; gap: 12px; }
   .music { top: 12px; right: 12px; }
   .qr-frame { width: 200px; height: 200px; }
@@ -941,7 +963,7 @@ textarea { min-height: 95px; resize: vertical; }
 }
 @media(max-width: 600px) {
   body { background-attachment: scroll; }
-  .section::before, .section::after { opacity: 0.4; width: 78px; height: 78px; }
+  .section::before, .section::after { opacity: 0.45; width: 85px; height: 85px; }
   .section::before { top: 9px; left: 6px; }
   .section::after { bottom: 5px; right: 6px; }
 }
@@ -1005,7 +1027,7 @@ textarea { min-height: 95px; resize: vertical; }
   </div>
 </section>
 
-<!-- SECCIÓN DE PADRINOS CON DETALLES PRIMAVERALES -->
+<!-- SECCIÓN DE PADRINOS CON MARCA DE AGUA Y RELIEVE BOTÁNICO -->
 <section class="section center fade" id="padrinos">
   <div class="content">
     <div class="kicker">Guías de nuestro camino</div>
@@ -1159,7 +1181,7 @@ textarea { min-height: 95px; resize: vertical; }
 const $=id=>document.getElementById(id);
 function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',3000)}
 
-/* Pétalos Primaverales */
+/* Lluvia Animada de Pétalos */
 const canvas = $('petal-canvas');
 const ctx = canvas.getContext('2d');
 let width = canvas.width = window.innerWidth;
@@ -1214,7 +1236,7 @@ function animatePetals() {
 }
 animatePetals();
 
-/* Sobre interactivo con relieve 3D */
+/* Apertura Interactiva del Sobre */
 const envelope = $('envelope');
 function openEnvelope() {
   envelope.classList.toggle('open');
@@ -1300,7 +1322,7 @@ $('rsvpForm').addEventListener('submit', e => {
   window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
 });
 
-/* Animaciones al hacer scroll */
+/* Scroll animations */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (en.isIntersecting) {
