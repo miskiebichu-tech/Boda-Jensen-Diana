@@ -3,22 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4a5e4d">
-<title>Jensen & Diana · Invitación de primavera</title>
+<meta name="theme-color" content="#2e4d38">
+<title>Jensen & Diana · Invitación de Primavera</title>
+
+<!-- FUENTES ELEGANTES DE GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-/* ── PALETA Y ESTILOS PRIMAVERALES ELEGANTES ── */
+/* ── PALETA PRIMAVERAL VIVA Y ELEGANTE ── */
 :root {
-  --spring-green: #4a5e4d;
-  --sage-light: #7b937e;
-  --blush-pink: #f4e3df;
-  --rose-accent: #d8a79d;
-  --petal-cream: #faf7f2;
+  --spring-green: #2e4d38;
+  --emerald-vibrant: #1f6442;
+  --sage-light: #527c5b;
+  --rose-vibrant: #e86a82;
+  --blush-pink: #fbe9e7;
+  --peach-warm: #ffb796;
+  --petal-cream: #fffdfa;
   --paper-white: #ffffff;
-  --champagne-gold: #c2a66e;
-  --soft-gold: #e5d2a4;
-  --text-dark: #373c36;
-  --text-muted: #737870;
-  --line-color: #ebdcd5;
+  --champagne-gold: #d4a359;
+  --gold-glow: #f3c978;
+  --text-dark: #2a332c;
+  --text-muted: #5e6b60;
+  --line-color: #ebd6c5;
 }
 
 * { box-sizing: border-box; }
@@ -28,17 +36,18 @@ body {
   margin: 0;
   background: var(--petal-cream);
   color: var(--text-dark);
-  font-family: "Georgia", "Palatino Linotype", "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
   line-height: 1.6;
 }
 
 button, input, textarea, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-/* Barra superior floral degradada */
+/* Barra superior floral degradada viva */
 .topline {
   height: 6px;
-  background: linear-gradient(90deg, #9db4a0, #f2cdc3, #ebd494, #d1bfe3, #9db4a0);
+  background: linear-gradient(90deg, #2e4d38, #e86a82, #f3c978, #a86bc4, #1f6442);
 }
 
 /* ── HERO SECTION ── */
@@ -51,25 +60,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: relative;
   overflow: hidden;
   background: 
-    radial-gradient(circle at 10% 15%, #f9ebe7 0%, transparent 35%),
-    radial-gradient(circle at 90% 85%, #e8f0e6 0%, transparent 35%),
-    radial-gradient(circle at 85% 15%, #fbf5df 0%, transparent 30%),
-    linear-gradient(135deg, #ffffff 0%, #faf5ef 100%);
+    radial-gradient(circle at 10% 15%, #fceae6 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, #e1ebd9 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, #fff2d6 0%, transparent 35%),
+    linear-gradient(135deg, #ffffff 0%, #fffbf7 100%);
 }
 
 .hero:before, .hero:after {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 380px;
-  border: 1px solid var(--sage-light);
-  opacity: 0.35;
+  width: 300px;
+  height: 400px;
+  border: 1.5px solid var(--rose-vibrant);
+  opacity: 0.25;
   border-radius: 80% 0 80% 0;
   transform: rotate(-32deg);
   pointer-events: none;
 }
 .hero:before { left: -110px; top: 5%; }
-.hero:after { right: -110px; bottom: 3%; transform: rotate(148deg); border-color: var(--rose-accent); }
+.hero:after { right: -110px; bottom: 3%; transform: rotate(148deg); border-color: var(--emerald-vibrant); }
 
 .hero-inner {
   width: min(100%, 540px);
@@ -81,37 +90,39 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-inner:before, .hero-inner:after {
   position: absolute;
   content: "🌸";
-  font-size: 22px;
-  opacity: 0.7;
+  font-size: 24px;
+  opacity: 0.85;
   pointer-events: none;
 }
 .hero-inner:before { top: 2%; left: 2%; transform: rotate(-15deg); }
 .hero-inner:after { bottom: 8%; right: 2%; transform: rotate(15deg); }
 
 .eyebrow {
-  font: 11px/1.6 'Arial', sans-serif;
-  letter-spacing: 0.3em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--sage-light);
+  color: var(--emerald-vibrant);
   font-weight: 600;
 }
 
 .monogram {
-  width: 68px;
-  height: 68px;
-  border: 1px solid var(--champagne-gold);
+  width: 76px;
+  height: 76px;
+  border: 2px solid var(--champagne-gold);
   border-radius: 50%;
   display: grid;
   place-items: center;
   margin: 0 auto 24px;
-  color: var(--spring-green);
+  color: var(--emerald-vibrant);
+  font-family: 'Cinzel Decorative', serif;
   font-size: 24px;
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5), 0 8px 20px rgba(0,0,0,0.04);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.6), 0 8px 24px rgba(232, 106, 130, 0.15);
 }
 
-/* ── REDISEÑO DE SOBRE INTERACTIVO MÁS ELEGANTE Y CON FOTO ── */
+/* ── SOBRE INTERACTIVO ELEGANTE ── */
 .envelope-wrap {
   margin: 35px auto 30px;
   perspective: 1000px;
@@ -119,13 +130,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
   height: 240px;
   position: relative;
   cursor: pointer;
-  filter: drop-shadow(0 16px 25px rgba(74, 94, 77, 0.16));
+  filter: drop-shadow(0 16px 25px rgba(31, 100, 66, 0.18));
 }
 
 .envelope {
   position: absolute;
   inset: 20px 0 0;
-  background: #e4d7c8;
+  background: #ecd9cb;
   border-radius: 6px;
   overflow: visible;
 }
@@ -134,7 +145,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #f7efe6, #decab8);
+  background: linear-gradient(145deg, #f9eae1, #e3cbb9);
   clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
   z-index: 2;
   border-radius: 6px;
@@ -144,19 +155,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: absolute;
   left: 0; right: 0; top: 0;
   height: 135px;
-  background: linear-gradient(145deg, #ffffff, #eddcd0);
+  background: linear-gradient(145deg, #ffffff, #f7dcd3);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top;
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
-  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,0.1));
 }
 
 .letter {
   position: absolute;
   left: 5%; width: 90%; height: 220px; top: -10px;
   background: linear-gradient(145deg, #ffffff, #fffdfa);
-  border: 1px solid var(--soft-gold);
+  border: 1.5px solid var(--champagne-gold);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -168,12 +179,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .letter-photo-frame {
-  width: 100px;
-  height: 125px;
+  width: 105px;
+  height: 130px;
   border-radius: 50px;
   border: 2px solid var(--champagne-gold);
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   flex-shrink: 0;
 }
 
@@ -196,13 +207,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transform: translateX(-50%);
   width: 60px; height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ebd498, #b8954f 75%);
-  box-shadow: 0 4px 12px rgba(184, 149, 79, 0.4);
-  border: 2px solid #f7ebc6;
+  background: radial-gradient(circle at 35% 30%, #fbd888, #c6943e 75%);
+  box-shadow: 0 4px 14px rgba(198, 148, 62, 0.45);
+  border: 2px solid #fff5d6;
   color: #ffffff;
   display: grid;
   place-items: center;
-  font-size: 20px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 18px;
   transition: opacity 0.4s, transform 0.4s;
 }
 
@@ -211,7 +223,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .envelope-wrap.open .seal { opacity: 0; transform: translateX(-50%) scale(0.5); }
 
 .tap {
-  font: 10px 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -221,24 +234,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
 h1, h2, h3, p { margin-top: 0; }
 
 h1 {
-  font-size: clamp(38px, 8vw, 62px);
-  font-weight: 400;
-  line-height: 1.05;
-  margin: 14px 0;
-  color: var(--spring-green);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(34px, 7vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 16px 0;
+  color: var(--emerald-vibrant);
 }
 
 .amp {
-  color: var(--rose-accent);
+  color: var(--rose-vibrant);
   font-style: italic;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .hero-date {
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   letter-spacing: 0.25em;
   margin: 22px 0 28px;
-  color: var(--sage-light);
+  color: var(--emerald-vibrant);
   font-weight: 600;
 }
 
@@ -246,37 +261,41 @@ h1 {
   border: 0;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .primary {
-  background: var(--spring-green);
+  background: linear-gradient(135deg, #1f6442, #2e4d38);
   color: #ffffff;
-  padding: 15px 32px;
-  letter-spacing: 0.15em;
+  padding: 16px 36px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font: 11px 'Arial', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
   border-radius: 30px;
-  box-shadow: 0 6px 18px rgba(74, 94, 77, 0.22);
+  box-shadow: 0 6px 20px rgba(31, 100, 66, 0.28);
 }
 .primary:hover {
-  background: #394a3b;
+  background: linear-gradient(135deg, #e86a82, #c84d64);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(74, 94, 77, 0.3);
+  box-shadow: 0 8px 24px rgba(232, 106, 130, 0.35);
 }
 
 .outline {
   background: transparent;
-  border: 1px solid var(--sage-light);
-  color: var(--spring-green);
-  padding: 13px 24px;
-  font: 11px 'Arial', sans-serif;
-  letter-spacing: 0.12em;
+  border: 1.5px solid var(--emerald-vibrant);
+  color: var(--emerald-vibrant);
+  padding: 13px 26px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   border-radius: 30px;
 }
 .outline:hover {
-  background: rgba(123, 147, 126, 0.08);
-  border-color: var(--spring-green);
+  background: rgba(31, 100, 66, 0.08);
+  border-color: var(--rose-vibrant);
+  color: var(--rose-vibrant);
 }
 
 .music {
@@ -284,15 +303,17 @@ h1 {
   z-index: 20;
   right: 18px; top: 18px;
   border: 1px solid var(--line-color);
-  background: rgba(255, 253, 249, 0.9);
+  background: rgba(255, 253, 249, 0.92);
   backdrop-filter: blur(8px);
-  color: var(--spring-green);
-  padding: 10px 16px;
+  color: var(--emerald-vibrant);
+  padding: 10px 18px;
   border-radius: 30px;
-  font: 11px 'Arial', sans-serif;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
-.music span { margin-right: 6px; color: var(--rose-accent); }
+.music span { margin-right: 6px; color: var(--rose-vibrant); }
 
 /* ── SECCIONES Y TARJETAS ── */
 .section {
@@ -300,63 +321,68 @@ h1 {
   position: relative;
 }
 .section:nth-of-type(even) {
-  background: linear-gradient(135deg, #f5efe6 0%, #faf3ee 50%, #eef4eb 100%);
+  background: linear-gradient(135deg, #fbf2ec 0%, #fffbf7 50%, #eef5eb 100%);
 }
 
 .content { width: min(100%, 760px); margin: auto; }
 .center { text-align: center; }
 
 .kicker {
-  font: 10px 'Arial', sans-serif;
-  letter-spacing: 0.28em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--sage-light);
+  color: var(--rose-vibrant);
   font-weight: 600;
 }
 
 h2 {
-  font-size: clamp(32px, 6vw, 46px);
-  font-weight: 400;
-  line-height: 1.15;
-  color: var(--spring-green);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(28px, 5.5vw, 42px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--emerald-vibrant);
   margin: 14px 0 20px;
 }
 
 h3 {
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--spring-green);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--emerald-vibrant);
 }
 
 .intro {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.8;
-  max-width: 590px;
+  max-width: 610px;
   margin: 0 auto;
   color: var(--text-muted);
 }
 
 .botanical {
-  font-size: 22px;
-  color: var(--champagne-gold);
+  font-size: 24px;
+  color: var(--rose-vibrant);
   margin: 20px 0;
 }
 
 .names {
-  font-size: clamp(28px, 6vw, 45px);
-  line-height: 1.25;
-  color: var(--spring-green);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(26px, 5.5vw, 40px);
+  line-height: 1.3;
+  color: var(--emerald-vibrant);
+  font-weight: 600;
 }
 
 /* Foto principal en sección de mensaje */
 .photo-container {
   width: min(100%, 340px);
   height: 420px;
-  margin: 30px auto;
-  border-radius: 180px 180px 20px 20px;
+  margin: 32px auto;
+  border-radius: 180px 180px 24px 24px;
   overflow: hidden;
   border: 4px solid var(--paper-white);
-  box-shadow: 0 12px 32px rgba(74, 94, 77, 0.15), 0 0 0 1px var(--soft-gold);
+  box-shadow: 0 16px 36px rgba(31, 100, 66, 0.18), 0 0 0 1.5px var(--champagne-gold);
 }
 
 .photo-container img {
@@ -366,34 +392,36 @@ h3 {
 }
 
 .date-card {
-  border: 1px solid var(--champagne-gold);
-  padding: 32px 24px;
+  border: 1.5px solid var(--champagne-gold);
+  padding: 34px 24px;
   margin: 34px auto;
   max-width: 420px;
-  background: linear-gradient(145deg, #ffffff, #fffbf4);
+  background: linear-gradient(145deg, #ffffff, #fffbf2);
   position: relative;
-  border-radius: 4px;
-  box-shadow: 0 12px 30px rgba(194, 166, 110, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(212, 163, 89, 0.15);
 }
 .date-card:before {
   content: "";
   position: absolute;
   inset: 6px;
-  border: 1px solid var(--soft-gold);
+  border: 1px solid var(--gold-glow);
   pointer-events: none;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .date-num {
-  font-size: 64px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 66px;
   line-height: 1;
-  color: var(--spring-green);
+  color: var(--emerald-vibrant);
   margin: 12px 0;
 }
 .date-month {
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  font: 12px 'Arial', sans-serif;
-  color: var(--sage-light);
+  font-size: 12px;
+  color: var(--rose-vibrant);
   font-weight: 600;
 }
 
@@ -407,33 +435,44 @@ h3 {
 .tile {
   border: 1px solid var(--line-color);
   background: var(--paper-white);
-  padding: 28px 20px;
+  padding: 30px 20px;
   text-align: center;
-  border-radius: 6px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
 }
-.tile:nth-child(1) { background: linear-gradient(145deg, #ffffff, #faf0ed); }
-.tile:nth-child(2) { background: linear-gradient(145deg, #ffffff, #f0f5ee); }
+.tile:nth-child(1) { background: linear-gradient(145deg, #ffffff, #fdf1ee); }
+.tile:nth-child(2) { background: linear-gradient(145deg, #ffffff, #f1f7ed); }
 
-.tile .symbol { font-size: 26px; color: var(--champagne-gold); margin-bottom: 12px; }
-.tile p { font-size: 15px; line-height: 1.65; color: var(--text-muted); margin-bottom: 0; }
+.tile .symbol { font-size: 28px; color: var(--champagne-gold); margin-bottom: 10px; }
+.tile p { font-size: 17px; line-height: 1.6; color: var(--text-muted); margin-bottom: 0; }
 
 .timeline {
-  max-width: 520px;
-  margin: 32px auto 0;
+  max-width: 540px;
+  margin: 36px auto 0;
   text-align: left;
 }
 
 .event {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 105px 1fr;
   gap: 16px;
-  padding: 20px 0;
+  padding: 22px 0;
   border-bottom: 1px dashed var(--line-color);
 }
-.event time { color: var(--champagne-gold); font-size: 13px; letter-spacing: 0.05em; font-weight: bold; }
-.event strong { font-weight: 400; color: var(--spring-green); font-size: 19px; }
-.event p { font-size: 14px; line-height: 1.6; margin: 5px 0 0; color: var(--text-muted); }
+.event time { 
+  font-family: 'Montserrat', sans-serif;
+  color: var(--rose-vibrant); 
+  font-size: 13px; 
+  letter-spacing: 0.05em; 
+  font-weight: 600; 
+}
+.event strong { 
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600; 
+  color: var(--emerald-vibrant); 
+  font-size: 22px; 
+}
+.event p { font-size: 16px; line-height: 1.5; margin: 4px 0 0; color: var(--text-muted); }
 
 /* ── VESTIMENTA CON SILUETAS VECTORIALES ELEGANTES ── */
 .dress {
@@ -445,62 +484,63 @@ h3 {
 }
 
 .dress-card {
-  width: 170px;
-  padding: 28px 16px;
+  width: 175px;
+  padding: 30px 16px;
   border: 1px solid var(--line-color);
   background: var(--paper-white);
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.dress-card:first-child { background: linear-gradient(145deg, #ffffff, #f0f4ee); }
-.dress-card:last-child { background: linear-gradient(145deg, #ffffff, #fbf0ed); }
+.dress-card:first-child { background: linear-gradient(145deg, #ffffff, #f1f7ee); }
+.dress-card:last-child { background: linear-gradient(145deg, #ffffff, #fdeee9); }
 
 .dress-icon-svg {
-  width: 54px;
-  height: 70px;
-  fill: var(--spring-green);
+  width: 56px;
+  height: 72px;
+  fill: var(--emerald-vibrant);
   margin-bottom: 12px;
 }
 
-.dress-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 10px 0 0; }
+.dress-card p { font-size: 15px; color: var(--text-muted); line-height: 1.5; margin: 10px 0 0; }
 
 .giftbox, .rsvp {
   max-width: 520px;
   margin: 28px auto 0;
   background: var(--paper-white);
   border: 1px solid var(--line-color);
-  padding: 32px 28px;
-  border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  padding: 34px 28px;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
 }
 
 .map-placeholder {
   margin: 28px auto 0;
-  max-width: 520px;
-  padding: 28px;
-  background: linear-gradient(145deg, #edf3ea, #f7f2ea);
-  border: 1px solid #d8e2d4;
-  color: var(--spring-green);
-  border-radius: 6px;
+  max-width: 540px;
+  padding: 30px 24px;
+  background: linear-gradient(145deg, #f0f6ed, #faf4ec);
+  border: 1.5px solid #d4e0d0;
+  color: var(--emerald-vibrant);
+  border-radius: 8px;
 }
 
 label {
   display: block;
-  font: 11px 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sage-light);
-  margin: 16px 0 8px;
+  color: var(--emerald-vibrant);
+  margin: 18px 0 8px;
   font-weight: 600;
 }
 
 input, textarea, select {
   width: 100%;
-  padding: 13px;
+  padding: 14px;
   border: 1px solid var(--line-color);
   background: #fffefc;
   color: var(--text-dark);
@@ -509,35 +549,39 @@ input, textarea, select {
 }
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: var(--sage-light);
+  border-color: var(--rose-vibrant);
 }
 
-textarea { min-height: 80px; resize: vertical; }
+textarea { min-height: 85px; resize: vertical; }
 
 /* ── FOOTER ── */
 .foot {
-  padding: 50px 20px;
+  padding: 55px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #3d4f40, #4a5e4d);
+  background: linear-gradient(135deg, #1f6442, #2e4d38);
   color: #faf5ee;
 }
-.foot .names { color: #faf5ee; font-size: 30px; }
-.foot p { font-size: 13px; line-height: 1.7; color: #d6ded7; }
+.foot .names { 
+  color: #faf5ee; 
+  font-size: 32px; 
+}
+.foot p { font-size: 16px; line-height: 1.7; color: #d6ded7; }
 
 .toast {
   position: fixed;
   bottom: 24px; left: 50%;
   transform: translateX(-50%);
-  background: var(--spring-green);
+  background: var(--emerald-vibrant);
   color: white;
-  padding: 12px 24px;
-  font: 12px 'Arial', sans-serif;
+  padding: 12px 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   z-index: 30;
   display: none;
   max-width: 90%;
   text-align: center;
   border-radius: 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .fade {
@@ -546,13 +590,13 @@ textarea { min-height: 80px; resize: vertical; }
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .fade.visible { opacity: 1; transform: none; }
-.tiny { font: 11px 'Arial', sans-serif; color: var(--text-muted); line-height: 1.7; }
+.tiny { font-family: 'Montserrat', sans-serif; font-size: 11px; color: var(--text-muted); line-height: 1.7; }
 
 @media(max-width: 520px) {
   .section { padding: 60px 18px; }
   .grid { grid-template-columns: 1fr; }
   .envelope-wrap { height: 210px; }
-  .event { grid-template-columns: 80px 1fr; gap: 12px; }
+  .event { grid-template-columns: 85px 1fr; gap: 12px; }
   .music { top: 12px; right: 12px; }
 }
 
@@ -565,6 +609,7 @@ textarea { min-height: 80px; resize: vertical; }
 <body>
 <div class="topline"></div>
 <button class="music" id="musicBtn" aria-label="Activar música"><span>♫</span><b id="musicLabel">Música</b></button>
+
 <header class="hero" id="inicio">
  <div class="hero-inner">
   <div class="monogram">J <span style="color:var(--champagne-gold)">&</span> D</div>
@@ -573,13 +618,13 @@ textarea { min-height: 80px; resize: vertical; }
    <div class="envelope">
      <div class="letter">
        <div class="letter-photo-frame">
-         <!-- Foto recortada elegante dentro de la carta -->
-         <img src="Jensen-Diana.png" alt="Jensen y Diana">
+         <!-- Foto de los novios recortada elegiblemente -->
+         <img src="data:image/jpeg;base64,...(FOTO_NOVIO_Y_NOVIA)..." alt="Jensen y Diana">
        </div>
        <div class="letter-content">
          <div class="eyebrow" style="font-size:9px;">Nuestra Boda</div>
-         <div style="font-size:20px;color:var(--spring-green);margin:6px 0">Jensen <i style="color:var(--champagne-gold)">&</i> Diana</div>
-         <div style="font:10px Arial;letter-spacing:.15em;color:var(--sage-light)">27 · 11 · 2026</div>
+         <div style="font-family:'Cinzel Decorative',serif;font-size:18px;color:var(--emerald-vibrant);margin:6px 0">Jensen <i style="color:var(--rose-vibrant)">&</i> Diana</div>
+         <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.15em;color:var(--sage-light)">27 · 11 · 2026</div>
        </div>
      </div>
      <div class="flap"></div>
@@ -599,7 +644,7 @@ textarea { min-height: 80px; resize: vertical; }
  
  <!-- Fotografía principal de los novios -->
  <div class="photo-container">
-    <img src="Jensen-Diana.png" alt="Jensen y Diana">
+    <img src="data:image/jpeg;base64,...(FOTO_NOVIO_Y_NOVIA)..." alt="Jensen y Diana">
  </div>
 
  <p class="intro" style="margin-top:25px">Con inmensa alegría y con la bendición de Dios, queremos compartir contigo el comienzo de una nueva etapa de nuestras vidas. Nos encantaría que nos acompañes en este día tan especial.</p>
@@ -608,23 +653,35 @@ textarea { min-height: 80px; resize: vertical; }
 
 <section class="section center fade" id="fecha"><div class="content">
  <div class="kicker">Reserva la fecha</div><h2>El comienzo de<br>nuestra historia</h2>
- <div class="date-card"><div class="date-month" id="monthDisplay">Noviembre · 2026</div><div class="date-num" id="dayDisplay">27</div><div class="eyebrow" id="weekdayDisplay">Viernes</div><div style="margin:20px 0;color:var(--champagne-gold)">— ✦ —</div><div style="font-size:18px;color:var(--spring-green)" id="timeDisplay">5:00 p. m.</div></div>
+ <div class="date-card">
+   <div class="date-month" id="monthDisplay">Noviembre · 2026</div>
+   <div class="date-num" id="dayDisplay">27</div>
+   <div class="eyebrow" id="weekdayDisplay">Viernes</div>
+   <div style="margin:20px 0;color:var(--champagne-gold)">— ✦ —</div>
+   <div style="font-size:20px;color:var(--emerald-vibrant);font-weight:600" id="timeDisplay">4:30 p. m.</div>
+ </div>
  <button class="outline" id="calendarBtn">＋ Añadir al calendario</button>
- <div id="countdown" style="margin-top:22px;color:var(--sage-light);font-size:14px"></div>
+ <div id="countdown" style="margin-top:22px;color:var(--sage-light);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:500"></div>
  </div></section>
 
 <section class="section center fade" id="ceremonia"><div class="content">
  <div class="kicker">Celebremos juntos</div><h2>Detalles de la boda</h2><p class="intro">Tu presencia hará que este momento sea aún más inolvidable.</p>
  <div class="grid">
-  <div class="tile"><div class="symbol">✧</div><h3>Ceremonia</h3><p id="ceremonyText">Parroquia “Virgen del Carmen”</p><p id="ceremonyTime">5:00 p. m.</p></div>
-  <div class="tile"><div class="symbol">❦</div><h3>Recepción</h3><p id="receptionText">Detalles del lugar próximamente.</p><p id="receptionTime">Horario por confirmar</p></div>
+  <div class="tile"><div class="symbol">✧</div><h3>Ceremonia Religiosa</h3><p id="ceremonyText">Parroquia “Virgen del Carmen”</p><p id="ceremonyTime">4:30 p. m.</p></div>
+  <div class="tile"><div class="symbol">❦</div><h3>Recepción y Fiesta</h3><p id="receptionText">Local “La Casona Verde”</p><p id="receptionTime">6:30 p. m.</p></div>
  </div>
  <div class="timeline">
-  <div class="event"><time>5:00 p. m.</time><div><strong>Ceremonia religiosa</strong><p>Unimos nuestras vidas ante Dios.</p></div></div>
-  <div class="event"><time>Por confirmar</time><div><strong>Recepción y brindis</strong><p>Compartiremos juntos la alegría de este día.</p></div></div>
-  <div class="event"><time>Por confirmar</time><div><strong>Celebración</strong><p>Una noche para crear recuerdos inolvidables.</p></div></div>
+  <div class="event"><time>4:30 p. m.</time><div><strong>Ceremonia Religiosa</strong><p>Parroquia “Virgen del Carmen” - Unimos nuestras vidas ante Dios.</p></div></div>
+  <div class="event"><time>6:30 p. m.</time><div><strong>Recepción y Brindis</strong><p>Local “La Casona Verde” - Av. Túpac Amaru 350 (Frente a maestranza de Manantay).</p></div></div>
+  <div class="event"><time>7:30 p. m.</time><div><strong>Celebración y Fiesta</strong><p>Una noche inolvidable de música y alegría junto a nuestra familia y amigos.</p></div></div>
  </div>
- <div class="map-placeholder"><div style="font-size:26px">⌖</div><h3>Cómo llegar</h3><p id="mapText">Parroquia “Virgen del Carmen”</p><a id="mapLink" class="outline" style="display:inline-block;text-decoration:none;margin-top:8px" target="_blank" rel="noopener">Ver ubicación en Maps ↗</a></div>
+ <div class="map-placeholder">
+   <div style="font-size:28px">⌖</div>
+   <h3>Ubicación de la Fiesta</h3>
+   <p style="font-weight:600;margin-bottom:4px">Local “La Casona Verde”</p>
+   <p style="font-size:16px;color:var(--text-muted)">Av. Túpac Amaru 350, Frente a maestranza de Manantay</p>
+   <a id="mapLink" class="outline" style="display:inline-block;text-decoration:none;margin-top:12px" href="https://www.google.com/maps/search/?api=1&query=Av.+Tupac+Amaru+350,+Manantay" target="_blank" rel="noopener">Ver ubicación en Google Maps ↗</a>
+ </div>
  </div></section>
 
 <section class="section center fade" id="vestimenta"><div class="content">
@@ -635,17 +692,17 @@ textarea { min-height: 80px; resize: vertical; }
      <svg class="dress-icon-svg" viewBox="0 0 24 24">
        <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3 7l-2 1.5V18h2.5v4h5v-4H17v-7.5L15 9h-6zm1.5 1.5h3v2h-3v-2z"/>
      </svg>
-     <h3 style="font-size:18px">Caballeros</h3>
+     <h3 style="font-size:20px">Caballeros</h3>
      <p>Traje formal o esmoquin elegante.</p>
    </div>
    
    <!-- Tarjeta Damas con silueta vectorial SVG -->
    <div class="dress-card">
-     <svg class="dress-icon-svg" viewBox="0 0 24 24" style="fill:var(--rose-accent)">
+     <svg class="dress-icon-svg" viewBox="0 0 24 24" style="fill:var(--rose-vibrant)">
        <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-2 5l-3 4.5L10 22h4l3-10.5L14 7h-4zm2 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
      </svg>
-     <h3 style="font-size:18px">Damas</h3>
-     <p>Vestido largo formal en tonos de tu preferencia.</p>
+     <h3 style="font-size:20px">Damas</h3>
+     <p>Vestido largo formal en tonos primaverales.</p>
    </div>
  </div>
  <p class="tiny">Sugerencia opcional: reservar el blanco y marfil para la novia.</p>
@@ -653,7 +710,7 @@ textarea { min-height: 80px; resize: vertical; }
 
 <section class="section center fade" id="regalos"><div class="content">
  <div class="kicker">Un detalle de cariño</div><h2>Lista de regalos</h2><div class="botanical">❧</div>
- <div class="giftbox"><p class="intro" style="font-size:16px">Tu compañía es nuestro mejor regalo. Si deseas tener un detalle con nosotros, pronto compartiremos nuestra lista de regalos.</p><p id="giftDetails" class="tiny">La información de la lista se actualizará próximamente.</p></div>
+ <div class="giftbox"><p class="intro" style="font-size:18px">Tu compañía es nuestro mejor regalo. Si deseas tener un detalle con nosotros, pronto compartiremos nuestra lista de regalos.</p></div>
  </div></section>
 
 <section class="section center fade" id="rsvp"><div class="content">
@@ -685,7 +742,7 @@ envelope.addEventListener('click',openEnvelope);
 envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
 
 /* ── FECHA Y CUENTA REGRESIVA ── */
-const date=new Date(2026,10,27,17,0,0);
+const date=new Date(2026,10,27,16,30,0);
 const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 const days=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 $('monthDisplay').textContent=months[date.getMonth()]+' · '+date.getFullYear();
@@ -700,20 +757,19 @@ function countdown(){
   let daysLeft=Math.floor(diff/86400000),hours=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000);
   $('countdown').textContent=`Faltan ${daysLeft} días, ${hours} horas y ${mins} minutos`;
 }
-$('timeDisplay').textContent='5:00 p. m.';
-$('ceremonyTime').textContent='5:00 p. m.';
+$('timeDisplay').textContent='4:30 p. m.';
+$('ceremonyTime').textContent='4:30 p. m.';
 countdown();
 setInterval(countdown,60000);
 
-/* ── FUNCIÓN AÑADIR AL CALENDARIO MEJORADA (DESCARGA ICS Y GOOGLE CALENDAR) ── */
+/* ── FUNCIÓN AÑADIR AL CALENDARIO MEJORADA CON HORARIOS ACTUALIZADOS ── */
 $('calendarBtn').addEventListener('click', () => {
   const title = encodeURIComponent("Boda de Jensen y Diana");
-  const details = encodeURIComponent("Celebración de la boda de Jensen Izquierdo Vásquez y Diana Isamar Gómez Ahuanari.");
-  const location = encodeURIComponent("Parroquia Virgen del Carmen");
-  const startDate = "20261127T220000Z";
-  const endDate = "20261128T030000Z";
+  const details = encodeURIComponent("Ceremonia Religiosa (4:30 PM) en Parroquia Virgen del Carmen. Recepción y Fiesta (6:30 PM) en La Casona Verde (Av. Tupac Amaru 350).");
+  const location = encodeURIComponent("Parroquia Virgen del Carmen & La Casona Verde");
+  const startDate = "20261127T213000Z"; // 4:30 PM UTC-5
+  const endDate = "20261128T070000Z";   // Finalización evento
 
-  // Intentar abrir Google Calendar en dispositivos móviles/navegador, y al mismo tiempo generar descarga de archivo .ics
   const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
 
   let ics = [
@@ -739,9 +795,8 @@ $('calendarBtn').addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(a.href);
 
-  // Abrir Google Calendar en una pestaña secundaria si el usuario lo prefiere
   setTimeout(() => {
-    if (confirm("¿Deseas agregar el evento directamente en Google Calendar?")) {
+    if (confirm("¿Deseas guardar también el evento en Google Calendar?")) {
       window.open(gcalUrl, '_blank');
     }
   }, 500);
