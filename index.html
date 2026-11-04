@@ -62,7 +62,7 @@ body {
     radial-gradient(ellipse at 96% 31%, rgba(248,225,226,.6), transparent 28rem),
     radial-gradient(ellipse at 7% 58%, rgba(246,232,202,.52), transparent 27rem),
     radial-gradient(ellipse at 95% 83%, rgba(220,237,214,.6), transparent 30rem),
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 20c-8 12-16 12-24 0 8 16 0 24-16 24 16 8 16 16 0 24 12-8 12 0 24 16-8-16 0-24 16-24-16-8-16-16 0-24-12 8-12 0-24-16z' fill='%20d4a359' fill-opacity='0.035'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 20c-8 12-16 12-24 0 8 16 0 24-16 24 16 8 16 16 0 24 12-8 12 0 24 16-8-16 0-24 16-24-16-8-16-16 0-24-12 8-12 0-24-16z' fill='%23d4a359' fill-opacity='0.035'/%3E%3C/svg%3E");
   background-attachment: fixed;
 }
 button, input, textarea, select { font: inherit; }
@@ -225,7 +225,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .letter {
   position: absolute;
   left: 5%; width: 90%; height: 230px; top: -8px;
-  background: linear-gradient(165deg, #ffffff, #fffdf8);
+  background: 
+    linear-gradient(165deg, rgba(255,255,255,0.95), rgba(255,253,248,0.95)),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12c-2-3-6-3-8 0s0 7 8 11c8-4 10-8 8-11s-6-3-8 0z' fill='%23e65c7b' fill-opacity='0.04'/%3E%3C/svg%3E");
   border: 2px solid var(--champagne-gold);
   border-radius: 12px;
   display: flex;
@@ -239,21 +241,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transform-style: preserve-3d;
 }
 .letter::before {
-  content: "❧";
+  content: "❧ 🌹";
   position: absolute;
   top: 8px; left: 12px;
   font-size: 14px;
   color: var(--rose-vibrant);
-  opacity: 0.45;
+  opacity: 0.6;
 }
 .letter::after {
-  content: "❧";
+  content: "🌸 ❧";
   position: absolute;
   bottom: 8px; right: 12px;
   font-size: 14px;
   color: var(--emerald-vibrant);
-  opacity: 0.45;
-  transform: rotate(180deg);
+  opacity: 0.6;
 }
 .letter-photo-frame {
   width: 108px;
@@ -492,7 +493,7 @@ h1 {
     0 4px 12px rgba(74,113,73,0.15);
 }
 .section::before {
-  content: "❧  ❀";
+  content: "❧ 🌹 ❀";
   top: 10px;
   left: clamp(8px,3vw,40px);
   color: #7d9b70;
@@ -500,15 +501,15 @@ h1 {
   transform: rotate(-22deg);
 }
 .section::after {
-  content: "✿  ❧";
+  content: "✿ 💖 ❧";
   bottom: 5px;
   right: clamp(8px,3vw,40px);
   color: #d28791;
   font-size: clamp(21px,3.6vw,38px);
   transform: rotate(18deg);
 }
-.section:nth-of-type(even)::before { content: "✿  ❧"; color: #d28791; transform: rotate(18deg); }
-.section:nth-of-type(even)::after { content: "❧  ❀"; color: #7d9b70; transform: rotate(-18deg); }
+.section:nth-of-type(even)::before { content: "✿ 🌹 ❧"; color: #d28791; transform: rotate(18deg); }
+.section:nth-of-type(even)::after { content: "❧ 🌸 ❀"; color: #7d9b70; transform: rotate(-18deg); }
 
 .content { width: min(100%, 780px); margin: auto; }
 .center { text-align: center; }
@@ -585,13 +586,15 @@ h3 {
   display: block;
 }
 
-/* SECCIÓN DE PADRINOS CON RELIEVE Y FONDOS PRIMAVERALES */
+/* SECCIÓN DE PADRINOS CON RELIEVE Y FONDOS PRIMAVERALES DE FLORES Y CORAZONES */
 .padrinos-card {
   border: 2px solid var(--champagne-gold);
   padding: 44px 30px;
   margin: 40px auto;
   max-width: 580px;
-  background: linear-gradient(145deg, #ffffff, #fef8f3 40%, #f4faee 100%);
+  background: 
+    linear-gradient(145deg, rgba(255,255,255,0.95), rgba(254,248,243,0.92) 40%, rgba(244,250,238,0.95) 100%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-3-4-8-4-11 0s0 9 11 15c11-6 14-11 11-15s-8-4-11 0z' fill='%23e65c7b' fill-opacity='0.035'/%3E%3C/svg%3E");
   position: relative;
   border-radius: 22px;
   box-shadow: var(--border-3d);
@@ -612,11 +615,21 @@ h3 {
   margin-top: 26px;
 }
 .padrino-item {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.92);
   border: 1.5px solid var(--line-color);
   border-radius: 14px;
   padding: 18px 24px;
   box-shadow: var(--border-3d-soft);
+  position: relative;
+}
+.padrino-item::after {
+  content: "🌸";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  opacity: 0.5;
 }
 .padrino-role {
   font-family: 'Montserrat', sans-serif;
@@ -639,7 +652,9 @@ h3 {
   padding: 42px 30px;
   margin: 40px auto;
   max-width: 450px;
-  background: linear-gradient(145deg, #ffffff, #fffbf2);
+  background: 
+    linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,251,242,0.95)),
+    url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5c-4-4-10-4-13 0s0 10 13 18c13-8 17-14 13-18s-9-4-13 0z' fill='%23d4a359' fill-opacity='0.04'/%3E%3C/svg%3E");
   position: relative;
   border-radius: 18px;
   box-shadow: var(--border-3d);
@@ -687,6 +702,7 @@ h3 {
   border-radius: 18px;
   box-shadow: var(--border-3d);
   transition: transform 0.3s ease;
+  position: relative;
 }
 .tile:hover { transform: translateY(-5px); }
 .tile:nth-child(1) { background: linear-gradient(145deg, #ffffff, #fdf1ee); }
@@ -765,6 +781,7 @@ h3 {
   padding: 42px 34px;
   border-radius: 20px;
   box-shadow: var(--border-3d);
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20c-5-6-12-6-16 0s0 14 16 22c16-8 21-16 16-22s-11-6-16 0z' fill='%23e65c7b' fill-opacity='0.02'/%3E%3C/svg%3E");
 }
 .yape-card {
   background: linear-gradient(145deg, #ffffff, #f7edf9);
@@ -958,7 +975,7 @@ textarea { min-height: 95px; resize: vertical; }
           <div class="letter-content">
             <div class="eyebrow">Nuestra Boda</div>
             <div class="letter-names">Jensen <i style="color:var(--rose-vibrant);font-style:italic">&</i> Diana</div>
-            <div class="letter-date">27 · 11 · 2026</div>
+            <div class="letter-date">11 · 11 · 2026</div>
             <div class="letter-heart">♡</div>
           </div>
         </div>
@@ -968,7 +985,7 @@ textarea { min-height: 95px; resize: vertical; }
     </div>
     <div class="tap" id="tapText">Toca el sobre para abrir la invitación</div>
     <h1>Jensen <span class="amp">&</span><br>Diana</h1>
-    <div class="hero-date" id="heroDate">VIERNES · 27 NOVIEMBRE 2026</div>
+    <div class="hero-date" id="heroDate">MIÉRCOLES · 11 NOVIEMBRE 2026</div>
     <button class="primary" onclick="document.getElementById('mensaje').scrollIntoView({behavior:'smooth'})">Descubrir invitación</button>
   </div>
 </header>
@@ -976,7 +993,7 @@ textarea { min-height: 95px; resize: vertical; }
 <section class="section center fade" id="mensaje">
   <div class="content">
     <div class="kicker">Un día para recordar</div>
-    <div class="spring-divider"><span></span>❧ ✦ ❧<span></span></div>
+    <div class="spring-divider"><span></span>❧ 🌹 ❧<span></span></div>
     <div class="names" id="namesDisplay">Jensen Izquierdo Vásquez<br><span style="font-style:italic;color:var(--champagne-gold);font-size:.8em">&</span><br>Diana Isamar Gómez Ahuanari</div>
     
     <div class="photo-container">
@@ -988,12 +1005,12 @@ textarea { min-height: 95px; resize: vertical; }
   </div>
 </section>
 
-<!-- SECCIÓN DE PADRINOS -->
+<!-- SECCIÓN DE PADRINOS CON DETALLES PRIMAVERALES -->
 <section class="section center fade" id="padrinos">
   <div class="content">
     <div class="kicker">Guías de nuestro camino</div>
     <h2>Nuestros Padrinos</h2>
-    <div class="spring-divider"><span></span>✿ ❧ ✿<span></span></div>
+    <div class="spring-divider"><span></span>✿ 🌹 ✿<span></span></div>
     <div class="padrinos-card">
       <p class="intro" style="font-size:19px;margin-bottom:20px">Con gratitud y afecto especial, agradecemos el acompañamiento de nuestros padrinos de boda:</p>
       <div class="padrinos-grid">
@@ -1016,9 +1033,9 @@ textarea { min-height: 95px; resize: vertical; }
     <h2>El comienzo de<br>nuestra historia</h2>
     <div class="date-card">
       <div class="date-month" id="monthDisplay">Noviembre · 2026</div>
-      <div class="date-num" id="dayDisplay">27</div>
-      <div class="eyebrow" id="weekdayDisplay">Viernes</div>
-      <div style="margin:20px 0;color:var(--champagne-gold)">— ✦ —</div>
+      <div class="date-num" id="dayDisplay">11</div>
+      <div class="eyebrow" id="weekdayDisplay">Miércoles</div>
+      <div style="margin:20px 0;color:var(--champagne-gold)">— 🌸 ✦ 🌸 —</div>
       <div style="font-size:22px;color:var(--spring-green);font-weight:600" id="timeDisplay">4:30 p. m.</div>
     </div>
     <button class="outline" id="calendarBtn">＋ Añadir al calendario</button>
@@ -1133,7 +1150,7 @@ textarea { min-height: 95px; resize: vertical; }
   <div class="names">Jensen <i style="color:var(--champagne-gold)">&</i> Diana</div>
   <p>Con amor, esperamos compartir contigo<br>uno de los días más felices de nuestras vidas.</p>
   <div style="color:var(--champagne-gold);font-size:24px">❦</div>
-  <p id="footerDate">27 · 11 · 2026</p>
+  <p id="footerDate">11 · 11 · 2026</p>
 </footer>
 
 <div class="toast" id="toast" role="status"></div>
@@ -1213,15 +1230,15 @@ envelope.addEventListener('keydown', e => {
   }
 });
 
-/* Fecha y cuenta regresiva */
-const date = new Date(2026, 10, 27, 16, 30, 0);
+/* Fecha exacta: Miércoles 11 de Noviembre de 2026 */
+const date = new Date(2026, 10, 11, 16, 30, 0);
 const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 const days = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 $('monthDisplay').textContent = months[date.getMonth()] + ' · ' + date.getFullYear();
 $('dayDisplay').textContent = String(date.getDate()).padStart(2, '0');
 $('weekdayDisplay').textContent = days[date.getDay()];
-$('heroDate').textContent = days[date.getDay()].toUpperCase() + ' · 27 NOVIEMBRE 2026';
-$('footerDate').textContent = '27 · 11 · 2026';
+$('heroDate').textContent = days[date.getDay()].toUpperCase() + ' · 11 NOVIEMBRE 2026';
+$('footerDate').textContent = '11 · 11 · 2026';
 
 function countdown() {
   let diff = date - new Date();
@@ -1244,15 +1261,15 @@ $('calendarBtn').addEventListener('click', () => {
   const title = encodeURIComponent("Boda de Jensen y Diana");
   const details = encodeURIComponent("Ceremonia Religiosa (4:30 PM) en Parroquia Virgen del Carmen. Recepción y Fiesta (6:30 PM) en La Casona Verde (Av. Tupac Amaru 350).");
   const location = encodeURIComponent("Parroquia Virgen del Carmen & La Casona Verde");
-  const startDate = "20261127T213000Z";
-  const endDate = "20261128T070000Z";
+  const startDate = "20261111T213000Z";
+  const endDate = "20261112T070000Z";
   const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
   let ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//Invitacion Jensen y Diana//ES',
     'BEGIN:VEVENT',
-    'UID:jensen-diana-20261127@boda.local',
+    'UID:jensen-diana-20261111@boda.local',
     `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
     `DTSTART:${startDate}`,
     `DTEND:${endDate}`,
@@ -1265,7 +1282,7 @@ $('calendarBtn').addEventListener('click', () => {
   let blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
   let a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'Boda-Jensen-y-Diana-27-noviembre.ics';
+  a.download = 'Boda-Jensen-y-Diana-11-noviembre.ics';
   a.click();
   URL.revokeObjectURL(a.href);
   setTimeout(() => {
@@ -1275,10 +1292,10 @@ $('calendarBtn').addEventListener('click', () => {
   }, 500);
 });
 
-/* RSVP WhatsApp con nuevo número 932357573 */
+/* RSVP WhatsApp con el número 932357573 */
 $('rsvpForm').addEventListener('submit', e => {
   e.preventDefault();
-  let msg = `Hola, soy ${$('guestName').value}. ${$('attendance').value}. Número de asistentes: ${$('guestCount').value}. ${$('message').value ? 'Mensaje: ' + $('message').value : ''} Confirmación para la boda de Jensen y Diana, 27/11/2026.`;
+  let msg = `Hola, soy ${$('guestName').value}. ${$('attendance').value}. Número de asistentes: ${$('guestCount').value}. ${$('message').value ? 'Mensaje: ' + $('message').value : ''} Confirmación para la boda de Jensen y Diana, 11/11/2026.`;
   let phone = '51932357573';
   window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
 });
